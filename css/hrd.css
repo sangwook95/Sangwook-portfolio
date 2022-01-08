@@ -1,209 +1,383 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:wght@700;900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:wght@700;900&display=swap");
 
 :root {
-    --sm-font:12px;
-    --md-font:22px;
-    --basic-font-color:#292a2d;
-    --white-color:#fff;
-    --sub-letter-spacing:-1px;
+  --sm-font: 12px;
+  --md-font: 22px;
+  --basic-font-color: #292a2d;
+  --white-color: #fff;
+  --sub-letter-spacing: -1px;
 }
 
 /* class */
 .hidden {
-    position:absolute;
-    clip:rect(1px,1px,1px,1px);
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
 }
 .margin-0-auto {
-    margin:0 auto;
+  margin: 0 auto;
+}
+.clear-fix::after {
+  display: block;
+  content: "";
+  clear: both;
 }
 
 /* Normalizing */
 * {
-    margin:0;
-    padding:0;
+  margin: 0;
+  padding: 0;
 }
 li {
-    list-style:none;
+  list-style: none;
 }
 a {
-    text-decoration:none;
-    color:inherit;
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
 }
-
+span {
+  display: inline-block;
+}
 body {
-    font-family:'Noto Sans KR', sans-serif;
-    letter-spacing:-0.05em;
-    color:var(--basic-font-color);
+  font-family: "Noto Sans KR", sans-serif;
+  letter-spacing: -0.05em;
+  color: var(--basic-font-color);
+  height: 10000px;
 }
 /* End */
 
 /* Header */
 /* header z-index 1~10 */
 
-
 .hrd-header {
-    width:100%;
-    position:fixed;
-    z-index:10;
-    background-color: white;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  background-color: white;
 }
 .hrd-header-inner {
-    width:1140px;
+  width: 1140px;
 }
 .top-sub-gnb {
-    text-align:center;   
-    font-size:var(--sm-font);
-    margin-top:37px;
+  text-align: center;
+  font-size: var(--sm-font);
 }
 .top-sub-gnb-inner {
-    display:flex;
-    flex-direction:row;
-    justify-content:right; 
+  margin-top: 26px;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
 }
 .top-sub-gnb-el {
-    display:inline-block;
-    height:37px;
-    margin-right:40px;
+  display: inline-block;
+  height: 37px;
+  margin-right: 40px;
 }
 .top-sub-gnb-el > a {
-    padding:2px 0;
-    letter-spacing:-0.8px;
+  padding: 2px 0;
+  letter-spacing: -0.8px;
 }
 .hrd-main-logo {
-    position:absolute;
+  position: absolute;
 }
 .hrd-gnb-academy > a {
-    position:relative;
-    z-index:10;
+  position: relative;
+  z-index: 10;
 }
 .hrd-gnb-academy {
-    position:relative;
-    color:white;
+  position: relative;
+  color: white;
 }
 .hrd-gnb-academy::before {
-    content:"";
-    display:inline-block;
-    width:190px;
-    height:38px;
-    position:absolute;
-    top:18px;
-    left:10px;
-    background-image:url(../img/www_hrd_go_kr/kdg_bg.png);
+  content: "";
+  display: inline-block;
+  width: 190px;
+  height: 38px;
+  position: absolute;
+  top: 18px;
+  left: 10px;
+  background-image: url(../img/www_hrd_go_kr/kdg_bg.png);
 }
 .hrd-gnb-inner {
-    display:flex;
-    flex-direction:row;
-    justify-content:right;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
 }
 .hrd-gnb {
-    font-size:var(--md-font);
-    position:relative;
+  font-size: var(--md-font);
+  position: relative;
 }
 .hrd-nav-el > a {
-    display:inline-block;
-    padding:0 25px;
-    height:90px;
-    line-height:72px;
+  display: inline-block;
+  padding: 0 25px;
+  height: 80px;
+  line-height: 72px;
 }
 .hrd-main-logo {
-    position:absolute;
-    top:0;
-    left:0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .main-logo-bg {
-    display:inline-block;
-    width:190px;
-    height:42px;
-    background-image:url(../img/www_hrd_go_kr/headerLogo02.png);
+  display: inline-block;
+  width: 190px;
+  height: 42px;
+  background-image: url(../img/www_hrd_go_kr/headerLogo02.png);
 }
 
 /* search-login area */
 .search-login-container {
-    background:url(../img/www_hrd_go_kr/main_visual.png) no-repeat 396px 186px;
-    background-size: 674px 328px;
+  background: url(../img/www_hrd_go_kr/main_visual.png) no-repeat 396px 186px;
+  background-size: 674px 328px;
+  height: 540px;
 }
 .search-login-area {
-    width:100%;
-    height:540px;
-    background:transparent url(../img/www_hrd_go_kr/bg-pattern.png) repeat 0 0;
-    position:relative;
+  width: 100%;
+  height: 540px;
+  background: transparent url(../img/www_hrd_go_kr/bg-pattern.png) repeat 0 0;
+  position: relative;
 }
 .search-area-title {
-    padding-top:210px;
+  padding-top: 210px;
 }
 .search-login-container {
-    width:1150px;
-    position:relative;
+  width: 1150px;
+  position: relative;
 }
 .search-area-title {
-    font-weight:400;
-    letter-spacing:var(--sub-letter-spacing);
-    font-size:36px;
+  font-weight: 400;
+  letter-spacing: var(--sub-letter-spacing);
+  font-size: 36px;
 }
 .site-exp {
-    letter-spacing:var(--sub-letter-spacing);
+  letter-spacing: var(--sub-letter-spacing);
 }
 .main-login-area {
-    text-align:center;
-    position:absolute;
-    top:220px;
-    right:0;
-    width:240px;
-    box-shadow:5px 9px 22px -7px rgb(0 0 0 / 20%);
-    background:white;
-    display:flex;
-    flex-direction:column;
-    padding:44px 20px 24px 20px;
-    box-sizing:border-box;
-    /* width 280 height 320 */
+  text-align: center;
+  position: absolute;
+  top: 220px;
+  right: 0;
+  width: 240px;
+  box-shadow: 5px 9px 22px -7px rgb(0 0 0 / 20%);
+  background: white;
+  display: flex;
+  flex-direction: column;
+  padding: 44px 20px 24px 20px;
+  box-sizing: border-box;
+  /* width 280 height 320 */
 }
 .main-login-area::before {
-    width:78px;
-    height:78px;
-    top:-35px;
-    left:80px;
-    display:block;
-    position:absolute;
-    content:"";
-    background:url(../img/www_hrd_go_kr/bullet_login.png);
+  width: 78px;
+  height: 78px;
+  top: -35px;
+  left: 80px;
+  display: block;
+  position: absolute;
+  content: "";
+  background: url(../img/www_hrd_go_kr/bullet_login.png);
 }
 .login-area-title {
-    font-size:20px;
-    margin-bottom:16px;
-    display:inline-block;
+  font-size: 20px;
+  margin-bottom: 16px;
+  display: inline-block;
 }
 button.btn {
-    background-color:#bccfed;
-    height:38px;
-    line-height:38px;
-    margin-bottom:10px;
-    border:none;
+  background-color: #bccfed;
+  height: 38px;
+  line-height: 38px;
+  margin-bottom: 10px;
+  border: none;
 }
 .main-login-btn {
-    background-color:#4174df !important;
-    color: white;
+  background-color: #4174df !important;
+  color: white;
 }
 .main-login-area-bottom {
-    display:flex;
-    flex-direction:row;
-    margin-top:9px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 9px;
 }
 .main-login-area-bottom li a {
-    font-size:13px;
-    color:#666;
-    line-height:16px;
+  font-size: 13px;
+  color: #666;
+  line-height: 16px;
 }
 .dot {
-    margin:0 4px;
+  margin: 0 4px;
 }
 .pass-find::after {
-    content:"";
-    display:inline-block;
-    width:1px;
-    height:14px;
-    background-color:#666;
-    margin:0 12px;
-    margin-bottom: -2px;
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 14px;
+  background-color: #666;
+  margin: 0 12px;
+  margin-bottom: -2px;
+}
+.search-f-area {
+  display: inline-block;
+  height: 50px;
+  margin-top: 36px;
+}
+.search-bar-field {
+  height: 50px;
+  border: 1px solid #3d5895;
+  display: inline-block;
+}
+.search-inp::placeholder {
+  color: rgba(0, 0, 0, 0.1);
+  font-weight: 700;
+}
+.search-bar-container {
+  width: 824px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 55%,
+    rgba(255, 255, 255, 0.6) 70%,
+    rgba(255, 255, 255, 0) 100%
+  ) !important;
+}
+#serchTotalKeyword {
+  width: 560px;
+  height: 50px;
+  font-size: 14px;
+  border: none;
+  line-height: 22px;
+  padding: 14px;
+  box-sizing: border-box;
+}
+.search-menu-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+.search-menu-list li a {
+  font-size: 14px;
+  padding: 14px;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 56px;
+  height: 40px;
+}
+.search-btn-img a {
+  background: center url(../img/www_hrd_go_kr/btnSearch02.png);
+  height: 50px !important;
+  background-size: 100%;
+}
+.search-menu-list li {
+  height: 50px;
+  position: relative;
+}
+.search-menu-list li::before {
+  width: 1px;
+  height: 16px;
+  background-color: rgb(34, 34, 34);
+  content: "";
+  position: absolute;
+  top: 17px;
+}
+.search-btn-img::before {
+  display: none !important;
+}
+.hashtag-list {
+  display: flex;
+  flex-direction: row;
+}
+.hashtag-item {
+  height: 26px;
+  border: 1px solid #0b67b0;
+  border-radius: 35px;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 2px 12px;
+  margin-left: 10px;
+  color: #0b67b0;
+}
+.hashtag-item:first-child {
+  margin-left: unset;
+}
+.hashtag-item a {
+  font-size: 14px;
+  display: block;
+}
+.hashtag-item:last-child {
+  color: #e16207;
+  border: 1px solid #e16207;
+}
+.search-hashtag {
+  display: inline-block;
+  margin-top: 16px;
+}
+
+/* quick menu area */
+
+.quick-menu-area {
+  width: 100%;
+  height: 145px;
+  box-sizing: border-box;
+  padding: 30px 0 15px;
+  background-color: #f5f6fa;
+}
+.quick-menu-wrap {
+  width: 1140px;
+}
+.quick-menu-area-title {
+  width: 200px;
+  color: #4e4f51;
+  float: left;
+  font-size: 30px;
+  line-height: 1.4;
+  text-align: center;
+  font-weight: 500;
+}
+.quick-menu-list {
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+}
+.quick-menu-item {
+  width: 91.43px;
+  height: 52px;
+  text-align: center;
+  margin-left: 50px;
+}
+.quick-menu-item:first-child {
+  margin-left: unset;
+}
+.quick-menu-item a {
+  padding-top: 60px;
+  display: block;
+  white-space: nowrap;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  background-size: auto 52px;
+  background: url(../img/www_hrd_go_kr/learningCardSet2.png) no-repeat center
+    top;
+  color: #4e4f51;
+}
+.quick-menu-item:nth-child(1) a {
+  background-position: -99px 0;
+}
+.quick-menu-item:nth-child(2) a {
+  background-position: 0 0;
+}
+.quick-menu-item:nth-child(3) a {
+  background-position: -198px 0;
+}
+.quick-menu-item:nth-child(4) a {
+  background: url(../img/www_hrd_go_kr/lecture-apply.png) no-repeat center -15px;
+}
+.quick-menu-item:nth-child(5) a {
+  background-position: -495px 0;
+}
+.quick-menu-item:nth-child(6) a {
+  background-position: -297px 0;
+}
+.quick-menu-item:nth-child(7) a {
+  background: url(../img/www_hrd_go_kr/menual-download.png) no-repeat center -13px;
 }
