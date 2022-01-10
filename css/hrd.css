@@ -569,3 +569,110 @@ button.btn {
 .k-digital-button-area {
   padding-bottom: 40px;
 }
+.course-info-title {
+  font-size: 32px;
+  color: #4e4f51;
+  font-weight: 500;
+  text-align: center;
+  margin: 75px 0 40px;
+  display: inline-block;
+}
+.course-info-title-area {
+  text-align: center;
+}
+.course-more-btn {
+  width: auto;
+  height: 24px;
+  border: 1px solid #cdcdd1;
+  padding: 0 24px 0 10px;
+  line-height: 22px;
+  font-size: 14px;
+  background: url(../img/www_hrd_go_kr/ico-qmark.png) no-repeat right 10px top
+    50%;
+  background-size: auto;
+  position: relative;
+  top: -8px;
+  margin-left: 10px;
+}
+.course-info-button-list li {
+  flex: 1;
+  height: 60px;
+  box-sizing: border-box;
+}
+.course-info-button-list {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 2px solid rgb(67, 78, 101);
+}
+.course-info-button {
+  text-align: center;
+  background: transparent;
+  line-height: 58px;
+  color: rgb(78, 79, 81);
+  width: 100%;
+  height: 60px;
+  font-size: 16px;
+}
+.course-count {
+  font-size: 12px;
+}
+.active-course-button {
+  color: white;
+  background-color: rgb(67, 78, 101);
+}
+.course-info-content-wrap {
+  display: flex;
+  flex-direction: column;
+}
+.course-info-vertical-menu {
+  width: 295px;
+  box-sizing: border-box;
+  padding: 15px 35px 0 0;
+}
+.course-training-btn-list {
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0 10px 0;
+  border-bottom: 1px solid #e2e2e4;
+  width: 100%;
+  box-sizing: border-box;
+}
+.course-training-btn-el {
+  width: 170px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  box-sizing: border-box;
+  flex: 1;
+}
+.course-training-button {
+  width: 100%;
+  line-height: 40px;
+  font-size: 16px;
+  color: #727476;
+  box-sizing: border-box;
+  background: transparent;
+}
+.training-course-category {
+  width: 280px;
+  margin-top: 32px;
+  text-align: initial;
+}
+.training-course-category-el {
+  width: 49% !important;
+  height: 55px;
+  line-height: 46px;
+  display: inline-block;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.training-course-category-el a {
+  color: #4e4f51;
+  box-sizing: border-box;
+  font-size: 14px;
+  padding-left: 20px;
+}
+.training-course-el-count {
+  padding-left: 3px;
+}
