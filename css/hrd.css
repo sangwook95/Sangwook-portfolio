@@ -17,6 +17,7 @@
 }
 .margin-0-auto {
   margin: 0 auto;
+  width: 1140px;
 }
 .clear-fix::after {
   display: block;
@@ -45,6 +46,9 @@ body {
   letter-spacing: -0.05em;
   color: var(--basic-font-color);
   height: 10000px;
+}
+button {
+  border: none;
 }
 /* End */
 
@@ -404,19 +408,20 @@ button.btn {
   text-align: center;
 }
 
-.question-icon {
+.K-mini-icon {
   border: none;
   width: 20px;
   height: 20px;
-  background: url(../img/www_hrd_go_kr/icoTooltipQ2.png);
   margin-top: 12px;
+}
+.question-mini-icon {
+  background: url(../img/www_hrd_go_kr/icoTooltipQ2.png);
 }
 .digital-credit-area-title {
   position: relative;
   margin: 0 0 20px;
   color: #5c5c5e;
   font-size: 22px;
-  line-height: 32px;
   font-weight: 400;
 }
 .show-total {
@@ -443,6 +448,7 @@ button.btn {
 }
 .credit-content-list-el a {
   display: block;
+  width: 100%;
 }
 .credit-content-title {
   position: relative;
@@ -464,4 +470,102 @@ button.btn {
   width: 212px;
   height: 67px;
   top: 10px;
+}
+.credit-content-img {
+  display: block;
+  width: 100%;
+  height: 119px;
+  border: none;
+}
+
+.k-digital {
+  margin-top: 50px;
+}
+.video-mini-icon {
+  background: url(../img/www_hrd_go_kr/play-cam.png);
+  margin-left: 6px;
+}
+
+/* k-digital traing area */
+.k-training-list {
+  display: flex;
+  flex-direction: row;
+}
+.k-training-list-bg {
+  width: 365px;
+  height: 160px;
+}
+.k-training-list-el {
+  position: relative;
+  width: 365px;
+  margin-right: 20px;
+}
+.k-training-list-el-title,
+.k-training-list-el-exp,
+.k-training-more-btn {
+  position: absolute;
+}
+.k-training-more-btn {
+  background: url(../img/www_hrd_go_kr/btn-more.png) no-repeat;
+  width: 40px;
+  height: 40px;
+  right: 25px;
+  top: 5px;
+}
+.k-training-list-el-title {
+  top: 30px;
+  left: 70px;
+  color: rgb(41, 42, 45);
+  width: 270px;
+}
+.k-training-list-el-exp {
+  font-size: 14px;
+  color: #727476;
+  line-height: 22px;
+  top: 70px;
+  left: 20px;
+  width: 322px;
+}
+
+.k-digital-button-area {
+  padding-top: 20px;
+  text-align: center;
+}
+.k-digital-button-area-inner {
+  display: inline-block;
+}
+.k-digital-button-area-list {
+  display: flex;
+  flex-direction: row;
+}
+.k-digital-button {
+  border: 1px solid #434e65;
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  margin-right: 6px;
+  border-radius: 8px;
+}
+.active-button {
+  width: 24px;
+  height: 18px;
+  background: #434e65;
+}
+.k-digital-stop {
+  background: url(../img/www_hrd_go_kr/movieControlSet2_2.png) no-repeat;
+  background-size: auto 26px;
+  width: 26px;
+  height: 26px;
+}
+.k-digital-play {
+  background: url(../img/www_hrd_go_kr/movieControlSet2_2.png) no-repeat -26px top;
+  background-size: auto 26px;
+  width: 26px;
+  height: 26px;
+}
+.k-digital-button-icon-wrap {
+  margin-top: -5px;
+}
+.k-digital-button-area {
+  padding-bottom: 40px;
 }
