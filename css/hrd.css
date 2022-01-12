@@ -622,7 +622,7 @@ button.btn {
 }
 .course-info-content-wrap {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 .course-info-vertical-menu {
   width: 295px;
@@ -675,4 +675,106 @@ button.btn {
 }
 .training-course-el-count {
   padding-left: 3px;
+}
+
+.course-info-contents-main {
+  width: 262px;
+  height: 200px;
+}
+.course-info-contents-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 876px;
+}
+.course-info-contents-el {
+  width: 262px;
+  margin: 45px 30px 0 0;
+}
+.course-info-exp {
+  box-sizing: border-box;
+  padding: 20px 20px 10px 20px;
+  font-size: 18px;
+  color: #292a2d;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-all;
+  position: relative;
+}
+.course-info-contents-el a {
+  display: block;
+}
+.course-info-small-icon {
+  position: absolute;
+  right: 0;
+  top: 20px;
+}
+.graphArea {
+  display: table-cell;
+  position: relative;
+}
+.graph {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90px;
+  height: 90px;
+}
+.svg-item {
+  height: 90px;
+  width: 95%;
+  font-size: 16px;
+  margin: 0 auto;
+}
+.donut-ring {
+  stroke: #ebebeb;
+}
+.donut-segment-2 {
+  stroke: #4171df;
+}
+.course-info-under {
+  display: flex;
+  flex-direction: row;
+}
+.under-content-left-box {
+  font-size: 14px;
+  color: #727476;
+  text-align: justify;
+  width: 170px;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+.under-content-left-exp {
+  line-height: 20px;
+}
+.under-content-left-exp:nth-child(2) {
+  padding: 10px 0;
+}
+.star-evaluate {
+  background: url(../img/www_hrd_go_kr/icoStar.png);
+  height: 19px;
+  overflow: hidden;
+  display: block;
+}
+.star-evaluate.star-5 {
+  background-position: left bottom;
+}
+.percentage-exp {
+  position: absolute;
+  width: 80px;
+  top: 26px;
+  left: 6px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 16px;
+  color: #727476;
+}
+.under-content-right-box {
+  position: relative;
+}
+.course-info-contents-list {
+  padding-bottom: 20px;
+}
+.course-info-contents-buttons {
+  padding-top: 20px;
 }
