@@ -825,12 +825,12 @@ button.btn {
   font-size: 11px;
   border: 1px solid #eaeaea;
 }
-.notice-info_title {
+.notice-search-area-title {
   font-size: 32px;
   color: #4e4f51;
   font-weight: 500;
   text-align: center;
-  margin: 75px 0 40px;
+  margin: 35px 0 40px;
 }
 .notice-info_btn {
   background: url(../img/www_hrd_go_kr/btnMoreList.png);
@@ -843,4 +843,96 @@ button.btn {
 }
 .notice-info_title-wrap {
   position: relative;
+}
+.notice-info-search-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+.notice-info-area {
+  width: 550px;
+}
+.institute-search-data legend {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute;
+}
+.institute-search-area {
+  width: 550px;
+}
+.institute-search-inner-wrap {
+  display: flex;
+  flex-direction: row;
+}
+.search_inner-right-bg {
+  background: url(../img/www_hrd_go_kr/bgMap.png) no-repeat center;
+  width: 295px;
+  height: 100%;
+  background-size: cover;
+}
+.institute-search-inner-wrap {
+  border: 1px solid #f4f6f9;
+  box-sizing: border-box;
+  height: 349px;
+}
+.institute-search-data {
+  width: 255px;
+}
+.search-inner-left_top dl {
+  padding: 20px 0 22px 24px;
+}
+.center-area-selec {
+  border: none;
+  display: inline-block;
+  width: 180px;
+  border: 1px solid #cdcdd1;
+  margin-top: 10px;
+  padding: 0 30px 0 20px;
+  font-size: 14px;
+  line-height: 30px;
+  height: 30px;
+}
+.center-search-btn {
+  margin: 12px 0 0 0;
+  width: 180px;
+  height: 30px;
+  line-height: 28px;
+  background: #434e65;
+  color: #fff;
+  font-size: 14px;
+  border: 1px solid #4171df;
+}
+.search-inner-button-el {
+  background: url(../img/www_hrd_go_kr/arrowGoLink02.png) #f4f6f9 no-repeat
+    190px 50%;
+  border-bottom: 1px solid #d5d5d9;
+  padding: 0 25px;
+}
+.search-inner-button-el a {
+  width: 100%;
+  height: 100px;
+  line-height: 98px;
+  color: #222222;
+  font-size: 16px;
+  font-weight: 500;
+}
+.search-inner-button-el.border-bottom {
+  border-bottom: none;
+}
+.advertise-box {
+  width: 550px;
+  overflow: hidden;
+  margin-top: 32px;
+}
+.advertise-banner-list {
+  width: 1100px;
+  display: flex;
+}
+.advertise-banner-list-el img {
+  display: block;
+  width: 100%;
+}
+.k-digital-button-area.padding-0 {
+  padding: unset;
+  position: relative;
+  top: -5px;
 }

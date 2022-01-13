@@ -1,622 +1,1049 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HRD-Net</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/hrd.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HRD-Net</title>
-  <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" href="./css/hrd.css" />
-</head>
-
-<body>
-  <!-- Header -->
-  <header class="hrd-header">
-    <div class="hrd-header-inner margin-0-auto">
-      <div class="hrd-header-top">
-        <!-- top-menu -->
-        <nav class="top-sub-gnb">
-          <ul class="top-sub-gnb-inner">
-            <li class="top-sub-gnb-el sub-gnb-log-in">
-              <a href="#">로그인</a>
+  <body>
+    <!-- Header -->
+    <header class="hrd-header">
+      <div class="hrd-header-inner margin-0-auto">
+        <div class="hrd-header-top">
+          <!-- top-menu -->
+          <nav class="top-sub-gnb">
+            <ul class="top-sub-gnb-inner">
+              <li class="top-sub-gnb-el sub-gnb-log-in">
+                <a href="#">로그인</a>
+              </li>
+              <li class="top-sub-gnb-el sub-gnb-sign-in">
+                <a href="#">회원가입</a>
+              </li>
+              <li class="top-sub-gnb-el sub-gnb-customer-serv">
+                <a href="#">고객센터</a>
+              </li>
+              <li class="top-sub-gnb-el sub-gnb-intro">
+                <a href="#">HRD-Net 소개</a>
+              </li>
+              <li class="top-sub-gnb-el sub-gnb-intro">
+                <a href="#">원격지원</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- main menu -->
+        <nav class="hrd-gnb">
+          <h1 class="hrd-main-logo">
+            <span class="hrd-title hidden">HRD-Net</span>
+            <a class="main-logo-bg" href="#"></a>
+          </h1>
+          <ul class="hrd-gnb-inner">
+            <li class="hrd-nav-el hrd-gnb-course">
+              <a href="#">훈련과정</a>
             </li>
-            <li class="top-sub-gnb-el sub-gnb-sign-in">
-              <a href="#">회원가입</a>
+            <li class="hrd-nav-el hrd-gnb-policy">
+              <a href="#">지원제도</a>
             </li>
-            <li class="top-sub-gnb-el sub-gnb-customer-serv">
-              <a href="#">고객센터</a>
+            <li class="hrd-nav-el hrd-gnb-jop">
+              <a href="#">일자리&#183;직업정보</a>
             </li>
-            <li class="top-sub-gnb-el sub-gnb-intro">
-              <a href="#">HRD-Net 소개</a>
+            <li class="hrd-nav-el hrd-gnb-center">
+              <a href="#">지식정보센터</a>
             </li>
-            <li class="top-sub-gnb-el sub-gnb-intro">
-              <a href="#">원격지원</a>
+            <li class="hrd-nav-el hrd-gnb-academy">
+              <a href="#">K-디지털 아카데미</a>
             </li>
           </ul>
         </nav>
       </div>
-      <!-- main menu -->
-      <nav class="hrd-gnb">
-        <h1 class="hrd-main-logo">
-          <span class="hrd-title hidden">HRD-Net</span>
-          <a class="main-logo-bg" href="#"></a>
-        </h1>
-        <ul class="hrd-gnb-inner">
-          <li class="hrd-nav-el hrd-gnb-course">
-            <a href="#">훈련과정</a>
-          </li>
-          <li class="hrd-nav-el hrd-gnb-policy">
-            <a href="#">지원제도</a>
-          </li>
-          <li class="hrd-nav-el hrd-gnb-jop">
-            <a href="#">일자리&#183;직업정보</a>
-          </li>
-          <li class="hrd-nav-el hrd-gnb-center">
-            <a href="#">지식정보센터</a>
-          </li>
-          <li class="hrd-nav-el hrd-gnb-academy">
-            <a href="#">K-디지털 아카데미</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <!-- login search area -->
-  <main class="search-login-area">
-    <div class="search-login-container margin-0-auto">
-      <h2 class="search-area-title">
-        오늘도 더 성장할 나를 위한<br />
-        <strong class="site-exp">직업훈련 지식포털</strong>
-      </h2>
-      <div class="main-login-area">
-        <div class="login-check-icon"></div>
-        <strong class="login-area-title">로그인을 해 주세요</strong>
-        <button class="main-login-btn btn">로그인</button>
-        <button class="certification-login-btn btn">간편인증 로그인</button>
-        <ul class="main-login-area-bottom">
-          <li class="id-password-find">
-            <a href="#">아이디</a>
-            <span class="dot">&#183;</span>
-            <a class="pass-find" href="#">비밀번호 찾기</a>
-          </li>
-          <li class="sign-up">
-            <a href="#">회원가입</a>
-          </li>
-        </ul>
-      </div>
-      <form class="search-f-area" id="searchForm-area" action="#" method="post">
-        <fieldset class="search-bar-field">
-          <legend class="search-bar-title hidden">통합검색</legend>
-          <div class="search-bar-container">
-            <div class="input-area">
-              <label for="serchTotalKeyword" class="input-lab hidden">통합검색</label>
-              <input type="text" placeholder="무엇을 찾으세요?" name="serchTotalKeyword" id="serchTotalKeyword"
-                class="search-inp" />
+    </header>
+    <!-- login search area -->
+    <main class="search-login-area">
+      <div class="search-login-container margin-0-auto">
+        <h2 class="search-area-title">
+          오늘도 더 성장할 나를 위한<br />
+          <strong class="site-exp">직업훈련 지식포털</strong>
+        </h2>
+        <div class="main-login-area">
+          <div class="login-check-icon"></div>
+          <strong class="login-area-title">로그인을 해 주세요</strong>
+          <button class="main-login-btn btn">로그인</button>
+          <button class="certification-login-btn btn">간편인증 로그인</button>
+          <ul class="main-login-area-bottom">
+            <li class="id-password-find">
+              <a href="#">아이디</a>
+              <span class="dot">&#183;</span>
+              <a class="pass-find" href="#">비밀번호 찾기</a>
+            </li>
+            <li class="sign-up">
+              <a href="#">회원가입</a>
+            </li>
+          </ul>
+        </div>
+        <form
+          class="search-f-area"
+          id="searchForm-area"
+          action="#"
+          method="post"
+        >
+          <fieldset class="search-bar-field">
+            <legend class="search-bar-title hidden">통합검색</legend>
+            <div class="search-bar-container">
+              <div class="input-area">
+                <label for="serchTotalKeyword" class="input-lab hidden"
+                  >통합검색</label
+                >
+                <input
+                  type="text"
+                  placeholder="무엇을 찾으세요?"
+                  name="serchTotalKeyword"
+                  id="serchTotalKeyword"
+                  class="search-inp"
+                />
+              </div>
+              <div class="search-menu-area">
+                <ul class="search-menu-list">
+                  <li>
+                    <a href="#">지역</a>
+                  </li>
+                  <li>
+                    <a href="#">분야</a>
+                  </li>
+                  <li>
+                    <a href="#">기간</a>
+                  </li>
+                  <li class="search-btn-img">
+                    <a href="#"></a>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div class="search-menu-area">
-              <ul class="search-menu-list">
-                <li>
-                  <a href="#">지역</a>
-                </li>
-                <li>
-                  <a href="#">분야</a>
-                </li>
-                <li>
-                  <a href="#">기간</a>
-                </li>
-                <li class="search-btn-img">
-                  <a href="#"></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </fieldset>
-      </form>
-      <div class="search-hashtag">
-        <ul class="hashtag-list">
-          <li class="hashtag-item">
-            <a href="#">#K-Digital Training</a>
-          </li>
-          <li class="hashtag-item">
-            <a href="#">#K-디지털 트레이닝</a>
-          </li>
-          <li class="hashtag-item">
-            <a href="#">#K-Digital Credit</a>
-          </li>
-          <li class="hashtag-item">
-            <a href="#">#K-디지털 크레딧</a>
-          </li>
-          <li class="hashtag-item">
-            <a href="#">#K-기업</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </main>
-  <!-- quick-menu-section -->
-  <div class="quick-menu-area">
-    <div class="quick-menu-wrap margin-0-auto clear-fix">
-      <h2 class="quick-menu-area-title">국민내일<br />배움카드</h2>
-      <ul class="quick-menu-list">
-        <li class="quick-menu-item">
-          <a href="#"> 동영상시청 </a>
-        </li>
-        <li class="quick-menu-item">
-          <a href="#"> 발급신청 </a>
-        </li>
-        <li class="quick-menu-item">
-          <a href="#"> 진단상담 </a>
-        </li>
-        <li class="quick-menu-item">
-          <a href="#"> 수강신청 </a>
-        </li>
-        <li class="quick-menu-item">
-          <a href="#"> 수강평등록 </a>
-        </li>
-        <li class="quick-menu-item">
-          <a href="#"> 수강이력 </a>
-        </li>
-        <li class="quick-menu-item">
-          <a href="#"> 이용메뉴얼 </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <div class="main-content-wrap">
-    <div class="question-area margin-0-auto">
-      <h2 class="question-text">
-        <a href="#">디지털 훈련과정이 궁금하시죠?</a>
-      </h2>
-    </div>
-    <div class="digital-credit-area-inner margin-0-auto">
-      <h3 class="digital-credit-area-title">
-        K-디지털 크레딧(K-Digital Credit)&nbsp;&nbsp;
-        <button class="question-mini-icon K-mini-icon"></button>
-        <button class="show-total">+ 전체보기</button>
-      </h3>
-      <ul class="credit-content-list">
-        <li class="credit-content-list-el">
-          <a href="#">
-            <img src="./img/www_hrd_go_kr/K-DigitalCredit_01.png" alt="#" class="credit-content-img" />
-            <p class="credit-content-title">고려아카데미(원격)</p>
-            <p class="credit-content-exp">
-              비전공자를 위한 디지털 기초 지식 (빅데이터, 인공지능,
-              블록체인)[초급]
-            </p>
-          </a>
-        </li>
-        <li class="credit-content-list-el">
-          <a href="#">
-            <img src="./img/www_hrd_go_kr/K-DigitalCredit_02.png" alt="#" class="credit-content-img" />
-            <p class="credit-content-title">러닝핏</p>
-            <p class="credit-content-exp">4차 산업혁명 신기술과 첫만남</p>
-          </a>
-        </li>
-        <li class="credit-content-list-el">
-          <a href="#">
-            <img src="./img/www_hrd_go_kr/K-DigitalCredit_03.png" alt="#" class="credit-content-img" />
-            <p class="credit-content-title">(주)알파코</p>
-            <p class="credit-content-exp">
-              [누구나 코딩] 코딩으로 드론 날리기
-            </p>
-          </a>
-        </li>
-        <li class="credit-content-list-el">
-          <a href="#">
-            <img src="./img/www_hrd_go_kr/K-DigitalCredit_04.png" alt="#" class="credit-content-img" />
-            <p class="credit-content-title">팀스파르타주식회사</p>
-            <p class="credit-content-exp">
-              [왕초보] 비개발자를 위한, 웹 개발 종합반(프로그래밍 실무,
-              풀스택)[초급]
-            </p>
-          </a>
-        </li>
-        <li class="credit-content-list-el">
-          <a href="#">
-            <img src="./img/www_hrd_go_kr/K-DigitalCredit_05.png" alt="#" class="credit-content-img" />
-            <p class="credit-content-title">패스트캠퍼스강남학원</p>
-            <p class="credit-content-exp">
-              빅데이터 분석 첫걸음 시작하기[초급]
-            </p>
-          </a>
-        </li>
-      </ul>
-    </div>
-    <!-- k-digital-area -->
-    <div class="k-digital-credit-wrap margin-0-auto">
-      <h3 class="digital-credit-area-title k-digital">
-        K-디지털 트레이닝(K-Digital Training)&nbsp;&nbsp;
-        <button class="question-mini-icon K-mini-icon"></button>
-        <button class="video-mini-icon K-mini-icon"></button>
-        <button class="show-total">+ 전체보기</button>
-      </h3>
-      <ul class="k-training-list">
-        <li class="k-training-list-el"><a href="#">
-            <img src="./img/www_hrd_go_kr/digitalTechImg03.png" alt="k-training-bg3" class="k-training-list-bg">
-            <span class="k-training-more-btn"></span>
-            <p class="k-training-list-el-title">스마트 제조</p>
-            <p class="k-training-list-el-exp">가상물리 시스템을 기반으로 로봇 IoT, 인공지능 등 신기술을 활용하여 제조공정을 고도화하는 기술 및 시스템의 개발, 구축, 운용에
-              관련된 분야</p>
-          </a></li>
-        <li class="k-training-list-el"><a href="#">
-            <img src="./img/www_hrd_go_kr/digitalTechImg04.png" alt="k-training-bg4" class="k-training-list-bg">
-            <span class="k-training-more-btn"></span>
-            <p class="k-training-list-el-title">인공지능</p>
-            <p class="k-training-list-el-exp">컴퓨터가 인간의 지적 업무를 대행하게 할 수 있는, 알고리즘, 프로그램, 시스템 개발 및 응용서비스에 관련된 분야</p>
-          </a></li>
-        <li class="k-training-list-el"><a href="#">
-            <img src="./img/www_hrd_go_kr/digitalTechImg05.png" alt="k-training-bg5" class="k-training-list-bg">
-            <span class="k-training-more-btn"></span>
-            <p class="k-training-list-el-title">클라우드 컴퓨팅</p>
-            <p class="k-training-list-el-exp">사용자 필요에 따라 네트워크를 통해 유연하고 신속하게 IT 시스템과 서비스를 제공하는 기술 및 시스템 개발과 구축, 운용에 관련된
-              분야
-            </p>
-          </a></li>
-      </ul>
-      <div class="k-digital-button-area margin-0-auto">
-        <div class="k-digital-button-area-inner">
-          <ul class="k-digital-button-area-list">
-            <li class="k-digital-button active-button"></li>
-            <li class="k-digital-button"></li>
-            <li class="k-digital-button"></li>
-            <li class="k-digital-button"></li>
-            <li class="k-digital-button"></li>
-            <li class="k-digital-button"></li>
-            <li class="k-digital-button"></li>
-            <li class="k-digital-button"></li>
-            <li class="k-digital-button"></li>
-            <li class="k-digital-button"></li>
-            <div class="k-digital-button-icon-wrap">
-              <button class="k-digital-stop"></button>
-              <button class="k-digital-play"></button>
-            </div>
+          </fieldset>
+        </form>
+        <div class="search-hashtag">
+          <ul class="hashtag-list">
+            <li class="hashtag-item">
+              <a href="#">#K-Digital Training</a>
+            </li>
+            <li class="hashtag-item">
+              <a href="#">#K-디지털 트레이닝</a>
+            </li>
+            <li class="hashtag-item">
+              <a href="#">#K-Digital Credit</a>
+            </li>
+            <li class="hashtag-item">
+              <a href="#">#K-디지털 크레딧</a>
+            </li>
+            <li class="hashtag-item">
+              <a href="#">#K-기업</a>
+            </li>
           </ul>
         </div>
       </div>
+    </main>
+    <!-- quick-menu-section -->
+    <div class="quick-menu-area">
+      <div class="quick-menu-wrap margin-0-auto clear-fix">
+        <h2 class="quick-menu-area-title">국민내일<br />배움카드</h2>
+        <ul class="quick-menu-list">
+          <li class="quick-menu-item">
+            <a href="#"> 동영상시청 </a>
+          </li>
+          <li class="quick-menu-item">
+            <a href="#"> 발급신청 </a>
+          </li>
+          <li class="quick-menu-item">
+            <a href="#"> 진단상담 </a>
+          </li>
+          <li class="quick-menu-item">
+            <a href="#"> 수강신청 </a>
+          </li>
+          <li class="quick-menu-item">
+            <a href="#"> 수강평등록 </a>
+          </li>
+          <li class="quick-menu-item">
+            <a href="#"> 수강이력 </a>
+          </li>
+          <li class="quick-menu-item">
+            <a href="#"> 이용메뉴얼 </a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="course-info-title-area margin-0-auto">
-      <h2 class="course-info-title">우수훈련과정</h2>
-      <button class="course-more-btn">기준알아보기</button>
-      <ul class="course-info-button-list">
-        <li class="course-info-button-el"><button class="course-info-button active-course-button">서울<span
-              class="course-count">(143)</span></button></li>
-        <li class="course-info-button-el"><button class="course-info-button">경기<span
-              class="course-count">(149)</span></button></li>
-        <li class="course-info-button-el"><button class="course-info-button">인천<span
-              class="course-count">(58)</span></button></li>
-        <li class="course-info-button-el"><button class="course-info-button">충청<span
-              class="course-count">(71)</span></button></li>
-        <li class="course-info-button-el"><button class="course-info-button">경상<span
-              class="course-count">(135)</span></button></li>
-        <li class="course-info-button-el"><button class="course-info-button">전라<span
-              class="course-count">(70)</span></button></li>
-        <li class="course-info-button-el"><button class="course-info-button">강원/제주<span
-              class="course-count">(8)</span></button></li>
-      </ul>
-      <div class="course-info-content-wrap">
-        <div class="course-info-vertical-menu">
-          <ul class="course-training-btn-list">
-            <li class="course-training-btn-el"><button class="course-training-button">구직자 훈련</button></li>
-            <li class="course-training-btn-el"><button class="course-training-button">재직자 훈련</button></li>
-          </ul>
-          <ul class="training-course-category">
-            <li class="training-course-category-el"><a href="#">전체<span class="training-course-el-count">(43)</span></a>
-            </li>
-            <li class="training-course-category-el"><a href="#">음식조리<span
-                  class="training-course-el-count">(2)</span></a></li>
-            <li class="training-course-category-el"><a href="#">생산관리<span
-                  class="training-course-el-count">(1)</span></a></li>
-            <li class="training-course-category-el"><a href="#">e-비즈니스<span
-                  class="training-course-el-count">(1)</span></a></li>
-            <li class="training-course-category-el"><a href="#">건축설계 · 감리<span
-                  class="training-course-el-count">(5)</span></a></li>
-            <li class="training-course-category-el"><a href="#">문화콘텐츠제작<span
-                  class="training-course-el-count">(4)</span></a></li>
-            <li class="training-course-category-el"><a href="#">디자인<span class="training-course-el-count">(5)</span></a>
-            </li>
-            <li class="training-course-category-el"><a href="#">법무<span class="training-course-el-count">(5)</span></a>
-            </li>
-            <li class="training-course-category-el"><a href="#">기계설계<span
-                  class="training-course-el-count">(5)</span></a></li>
-            <li class="training-course-category-el"><a href="#">출판<span class="training-course-el-count">(5)</span></a>
-            </li>
-            <li class="training-course-category-el"><a href="#">정보기술개발<span
-                  class="training-course-el-count">(5)</span></a></li>
-            <li class="training-course-category-el"><a href="#">회계<span class="training-course-el-count">(4)</span></a>
-            </li>
-            <li class="training-course-category-el"><a href="#">귀금속 · 보석<span
-                  class="training-course-el-count">(1)</span></a></li>
-          </ul>
-        </div>
-        <div class="course-info-vertical-content">
-          <ul class="course-info-contents-list">
-            <li class="course-info-contents-el"><a href="#"><img class="course-info-contents-main"
-                  src="./img/www_hrd_go_kr/3 (4).jpg" alt="" class="course-info-image"></a>
-              <a href="#">
-                <p class="course-info-exp">한식+양식조리기능사 취득(이론 + 실기)<img src="./img/www_hrd_go_kr/ico_system2_2.gif" alt=""
-                    class="course-info-small-icon"></p>
-              </a>
-              <div class="course-info-under">
-                <div class="under-content-left-box">
-                  <p class="under-content-left-exp">서울 금천구</p>
-                  <p class="under-content-left-exp">만족도</p>
-                  <span class="star-evaluate"></span>
-                </div>
-                <div class="under-content-right-box">
-                  <div class="graphArea">
-                    <div class="graph">
-                      <div class="svg-item">
-                        <svg width="100%" height="100%" viewBox="0 0 40 40" class="donut">
-                          <circle class="donut-hole" cx="20" cy="20" r="15.91549430918954" fill="#fff"></circle>
-                          <circle class="donut-ring" cx="20" cy="20" r="15.91549430918954" fill="transparent"
-                            stroke-width="6"></circle>
-                          <circle class="donut-segment donut-segment-2" cx="20" cy="20" r="15.91549430918954"
-                            fill="transparent" stroke-width="6" stroke-dasharray="78 22" stroke-dashoffset="25">
-                          </circle>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <p class="percentage-exp">취업률<br>78%</p>
-                </div>
+    <div class="main-content-wrap">
+      <div class="question-area margin-0-auto">
+        <h2 class="question-text">
+          <a href="#">디지털 훈련과정이 궁금하시죠?</a>
+        </h2>
+      </div>
+      <div class="digital-credit-area-inner margin-0-auto">
+        <h3 class="digital-credit-area-title">
+          K-디지털 크레딧(K-Digital Credit)&nbsp;&nbsp;
+          <button class="question-mini-icon K-mini-icon"></button>
+          <button class="show-total">+ 전체보기</button>
+        </h3>
+        <ul class="credit-content-list">
+          <li class="credit-content-list-el">
+            <a href="#">
+              <img
+                src="./img/www_hrd_go_kr/K-DigitalCredit_01.png"
+                alt="#"
+                class="credit-content-img"
+              />
+              <p class="credit-content-title">고려아카데미(원격)</p>
+              <p class="credit-content-exp">
+                비전공자를 위한 디지털 기초 지식 (빅데이터, 인공지능,
+                블록체인)[초급]
+              </p>
+            </a>
+          </li>
+          <li class="credit-content-list-el">
+            <a href="#">
+              <img
+                src="./img/www_hrd_go_kr/K-DigitalCredit_02.png"
+                alt="#"
+                class="credit-content-img"
+              />
+              <p class="credit-content-title">러닝핏</p>
+              <p class="credit-content-exp">4차 산업혁명 신기술과 첫만남</p>
+            </a>
+          </li>
+          <li class="credit-content-list-el">
+            <a href="#">
+              <img
+                src="./img/www_hrd_go_kr/K-DigitalCredit_03.png"
+                alt="#"
+                class="credit-content-img"
+              />
+              <p class="credit-content-title">(주)알파코</p>
+              <p class="credit-content-exp">
+                [누구나 코딩] 코딩으로 드론 날리기
+              </p>
+            </a>
+          </li>
+          <li class="credit-content-list-el">
+            <a href="#">
+              <img
+                src="./img/www_hrd_go_kr/K-DigitalCredit_04.png"
+                alt="#"
+                class="credit-content-img"
+              />
+              <p class="credit-content-title">팀스파르타주식회사</p>
+              <p class="credit-content-exp">
+                [왕초보] 비개발자를 위한, 웹 개발 종합반(프로그래밍 실무,
+                풀스택)[초급]
+              </p>
+            </a>
+          </li>
+          <li class="credit-content-list-el">
+            <a href="#">
+              <img
+                src="./img/www_hrd_go_kr/K-DigitalCredit_05.png"
+                alt="#"
+                class="credit-content-img"
+              />
+              <p class="credit-content-title">패스트캠퍼스강남학원</p>
+              <p class="credit-content-exp">
+                빅데이터 분석 첫걸음 시작하기[초급]
+              </p>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- k-digital-area -->
+      <div class="k-digital-credit-wrap margin-0-auto">
+        <h3 class="digital-credit-area-title k-digital">
+          K-디지털 트레이닝(K-Digital Training)&nbsp;&nbsp;
+          <button class="question-mini-icon K-mini-icon"></button>
+          <button class="video-mini-icon K-mini-icon"></button>
+          <button class="show-total">+ 전체보기</button>
+        </h3>
+        <ul class="k-training-list">
+          <li class="k-training-list-el">
+            <a href="#">
+              <img
+                src="./img/www_hrd_go_kr/digitalTechImg03.png"
+                alt="k-training-bg3"
+                class="k-training-list-bg"
+              />
+              <span class="k-training-more-btn"></span>
+              <p class="k-training-list-el-title">스마트 제조</p>
+              <p class="k-training-list-el-exp">
+                가상물리 시스템을 기반으로 로봇 IoT, 인공지능 등 신기술을
+                활용하여 제조공정을 고도화하는 기술 및 시스템의 개발, 구축,
+                운용에 관련된 분야
+              </p>
+            </a>
+          </li>
+          <li class="k-training-list-el">
+            <a href="#">
+              <img
+                src="./img/www_hrd_go_kr/digitalTechImg04.png"
+                alt="k-training-bg4"
+                class="k-training-list-bg"
+              />
+              <span class="k-training-more-btn"></span>
+              <p class="k-training-list-el-title">인공지능</p>
+              <p class="k-training-list-el-exp">
+                컴퓨터가 인간의 지적 업무를 대행하게 할 수 있는, 알고리즘,
+                프로그램, 시스템 개발 및 응용서비스에 관련된 분야
+              </p>
+            </a>
+          </li>
+          <li class="k-training-list-el">
+            <a href="#">
+              <img
+                src="./img/www_hrd_go_kr/digitalTechImg05.png"
+                alt="k-training-bg5"
+                class="k-training-list-bg"
+              />
+              <span class="k-training-more-btn"></span>
+              <p class="k-training-list-el-title">클라우드 컴퓨팅</p>
+              <p class="k-training-list-el-exp">
+                사용자 필요에 따라 네트워크를 통해 유연하고 신속하게 IT 시스템과
+                서비스를 제공하는 기술 및 시스템 개발과 구축, 운용에 관련된 분야
+              </p>
+            </a>
+          </li>
+        </ul>
+        <div class="k-digital-button-area margin-0-auto">
+          <div class="k-digital-button-area-inner">
+            <ul class="k-digital-button-area-list">
+              <li class="k-digital-button active-button"></li>
+              <li class="k-digital-button"></li>
+              <li class="k-digital-button"></li>
+              <li class="k-digital-button"></li>
+              <li class="k-digital-button"></li>
+              <li class="k-digital-button"></li>
+              <li class="k-digital-button"></li>
+              <li class="k-digital-button"></li>
+              <li class="k-digital-button"></li>
+              <li class="k-digital-button"></li>
+              <div class="k-digital-button-icon-wrap">
+                <button class="k-digital-stop"></button>
+                <button class="k-digital-play"></button>
               </div>
-            </li>
-            <li class="course-info-contents-el"><a href="#"><img class="course-info-contents-main"
-                  src="./img/www_hrd_go_kr/2 (8).jpg" alt="" class="course-info-image"></a>
-              <a href="#">
-                <p class="course-info-exp">전산세무회계(전산회계1급, 전산세무2급) &ERP정보관리사(회계2급, 인사2급)<img
-                    src="./img/www_hrd_go_kr/ico_system2_2.gif" alt="" class="course-info-small-icon">
-                </p>
-              </a>
-              <div class="course-info-under">
-                <div class="under-content-left-box">
-                  <p class="under-content-left-exp">서울 서초구</p>
-                  <p class="under-content-left-exp">만족도</p>
-                  <span class="star-evaluate star-5"></span>
-                </div>
-                <div class="under-content-right-box">
-                  <div class="graphArea">
-                    <div class="graph">
-                      <div class="svg-item">
-                        <svg width="100%" height="100%" viewBox="0 0 40 40" class="donut">
-                          <circle class="donut-hole" cx="20" cy="20" r="15.91549430918954" fill="#fff"></circle>
-                          <circle class="donut-ring" cx="20" cy="20" r="15.91549430918954" fill="transparent"
-                            stroke-width="6"></circle>
-                          <circle class="donut-segment donut-segment-2" cx="20" cy="20" r="15.91549430918954"
-                            fill="transparent" stroke-width="6" stroke-dasharray="78 22" stroke-dashoffset="25">
-                          </circle>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <p class="percentage-exp">취업률<br>75.5%</p>
-                </div>
-              </div>
-            </li>
-            <li class="course-info-contents-el"><a href="#"><img class="course-info-contents-main"
-                  src="./img/www_hrd_go_kr/1 (10).jpg" alt="" class="course-info-image"></a>
-              <a href="#">
-                <p class="course-info-exp">전자소송 및 회생파산 법률취업교육과정<img src="./img/www_hrd_go_kr/ico_system2_2.gif" alt=""
-                    class="course-info-small-icon">
-                </p>
-              </a>
-              <div class="course-info-under">
-                <div class="under-content-left-box">
-                  <p class="under-content-left-exp">서울 서초구</p>
-                  <p class="under-content-left-exp">만족도</p>
-                  <span class="star-evaluate"></span>
-                </div>
-                <div class="under-content-right-box">
-                  <div class="graphArea">
-                    <div class="graph">
-                      <div class="svg-item">
-                        <svg width="100%" height="100%" viewBox="0 0 40 40" class="donut">
-                          <circle class="donut-hole" cx="20" cy="20" r="15.91549430918954" fill="#fff"></circle>
-                          <circle class="donut-ring" cx="20" cy="20" r="15.91549430918954" fill="transparent"
-                            stroke-width="6"></circle>
-                          <circle class="donut-segment donut-segment-2" cx="20" cy="20" r="15.91549430918954"
-                            fill="transparent" stroke-width="6" stroke-dasharray="78 22" stroke-dashoffset="25">
-                          </circle>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <p class="percentage-exp">취업률<br>74.8%</p>
-                </div>
-              </div>
-            </li>
-            <li class="course-info-contents-el"><a href="#"><img class="course-info-contents-main"
-                  src="./img/www_hrd_go_kr/1 (11).jpg" alt="" class="course-info-image"></a>
-              <a href="#">
-                <p class="course-info-exp">전자상거래 디지털마케팅 및 광고 실무자 양성과정 <img src="./img/www_hrd_go_kr/ico_system2_2.gif"
-                    alt="" class="course-info-small-icon"></p>
-              </a>
-              <div class="course-info-under">
-                <div class="under-content-left-box">
-                  <p class="under-content-left-exp">서울 중구</p>
-                  <p class="under-content-left-exp">만족도</p>
-                  <span class="star-evaluate star-5"></span>
-                </div>
-                <div class="under-content-right-box">
-                  <div class="graphArea">
-                    <div class="graph">
-                      <div class="svg-item">
-                        <svg width="100%" height="100%" viewBox="0 0 40 40" class="donut">
-                          <circle class="donut-hole" cx="20" cy="20" r="15.91549430918954" fill="#fff"></circle>
-                          <circle class="donut-ring" cx="20" cy="20" r="15.91549430918954" fill="transparent"
-                            stroke-width="6"></circle>
-                          <circle class="donut-segment donut-segment-2" cx="20" cy="20" r="15.91549430918954"
-                            fill="transparent" stroke-width="6" stroke-dasharray="78 22" stroke-dashoffset="25">
-                          </circle>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <p class="percentage-exp">취업률<br>77.2%</p>
-                </div>
-              </div>
-            </li>
-            <li class="course-info-contents-el"><a href="#"><img class="course-info-contents-main"
-                  src="./img/www_hrd_go_kr/1 (5).jpg" alt="" class="course-info-image"></a>
-              <a href="#">
-                <p class="course-info-exp">[멀티미디어콘텐츠제작]광고영상콘텐츠(프리미어,에펙,영상편집)<img
-                    src="./img/www_hrd_go_kr/ico_system2_2.gif" alt="" class="course-info-small-icon">
-                </p>
-              </a>
-              <div class="course-info-under">
-                <div class="under-content-left-box">
-                  <p class="under-content-left-exp">서울 종로구</p>
-                  <p class="under-content-left-exp">만족도</p>
-                  <span class="star-evaluate"></span>
-                </div>
-                <div class="under-content-right-box">
-                  <div class="graphArea">
-                    <div class="graph">
-                      <div class="svg-item">
-                        <svg width="100%" height="100%" viewBox="0 0 40 40" class="donut">
-                          <circle class="donut-hole" cx="20" cy="20" r="15.91549430918954" fill="#fff"></circle>
-                          <circle class="donut-ring" cx="20" cy="20" r="15.91549430918954" fill="transparent"
-                            stroke-width="6"></circle>
-                          <circle class="donut-segment donut-segment-2" cx="20" cy="20" r="15.91549430918954"
-                            fill="transparent" stroke-width="6" stroke-dasharray="78 22" stroke-dashoffset="25">
-                          </circle>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <p class="percentage-exp">취업률<br>75%</p>
-                </div>
-              </div>
-            </li>
-            <li class="course-info-contents-el"><a href="#"><img class="course-info-contents-main"
-                  src="./img/www_hrd_go_kr/1 (7).jpg" alt="" class="course-info-image"></a>
-              <a href="#">
-                <p class="course-info-exp">전산회계1급,전산세무2급,ERP정보관리사(인사2급,회계2급) 자격증<img
-                    src="./img/www_hrd_go_kr/ico_system2_2.gif" alt="" class="course-info-small-icon">
-                </p>
-              </a>
-              <div class="course-info-under">
-                <div class="under-content-left-box">
-                  <p class="under-content-left-exp">서울 종로구</p>
-                  <p class="under-content-left-exp">만족도</p>
-                  <span class="star-evaluate star-5"></span>
-                </div>
-                <div class="under-content-right-box">
-                  <div class="graphArea">
-                    <div class="graph">
-                      <div class="svg-item">
-                        <svg width="100%" height="100%" viewBox="0 0 40 40" class="donut">
-                          <circle class="donut-hole" cx="20" cy="20" r="15.91549430918954" fill="#fff"></circle>
-                          <circle class="donut-ring" cx="20" cy="20" r="15.91549430918954" fill="transparent"
-                            stroke-width="6"></circle>
-                          <circle class="donut-segment donut-segment-2" cx="20" cy="20" r="15.91549430918954"
-                            fill="transparent" stroke-width="6" stroke-dasharray="78 22" stroke-dashoffset="25">
-                          </circle>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <p class="percentage-exp">취업률<br>75%</p>
-                </div>
-              </div>
-            </li>
-          </ul>
-          <div class="course-info-contents-buttons">
-            <div class="k-digital-button-area-inner">
-              <ul class="k-digital-button-area-list">
-                <li class="k-digital-button active-button"></li>
-                <li class="k-digital-button"></li>
-                <li class="k-digital-button"></li>
-                <li class="k-digital-button"></li>
-                <li class="k-digital-button"></li>
-                <li class="k-digital-button"></li>
-                <li class="k-digital-button"></li>
-                <li class="k-digital-button"></li>
-                <li class="k-digital-button"></li>
-                <li class="k-digital-button"></li>
-                <li class="k-digital-button"></li>
-                <li class="k-digital-button"></li>
-                <li class="k-digital-button"></li>
-                <li class="k-digital-button"></li>
-                <li class="k-digital-button"></li>
-                <li class="k-digital-button"></li>
-                <li class="k-digital-button"></li>
-                <li class="k-digital-button"></li>
-                <li class="k-digital-button"></li>
-                <li class="k-digital-button"></li>
-                <li class="k-digital-button"></li>
-                <li class="k-digital-button"></li>
-                <li class="k-digital-button"></li>
-                <div class="k-digital-button-icon-wrap">
-                  <button class="k-digital-stop"></button>
-                  <button class="k-digital-play"></button>
-                </div>
-              </ul>
-            </div>
+            </ul>
           </div>
         </div>
       </div>
-    </div>
-    <!-- k-digital-view -->
-    <div class="digital-business-area margin-0-auto">
-      <h2 class="digital-business-title">범부처 디지털 훈련 사업 모아보기</h2>
-      <ul class="digital-business-card-list">
-        <li>
-          <a href="#">
-            <figure class="digital-business_el digital-ai"></figure>
-            <figcaption>AI · 빅데이터</figcaption>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <figure class="digital-business_el digital-manufacture"></figure>
-            <figcaption>스마트제조</figcaption>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <figure class="digital-business_el digital-hight-tech"></figure>
-            <figcaption>첨단소재</figcaption>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <figure class="digital-business_el digital-bio"></figure>
-            <figcaption>바이오</figcaption>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <figure class="digital-business_el digital-cloud"></figure>
-            <figcaption>클라우드</figcaption>
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div class="notice-info-search-wrap margin-0-auto">
-      <div class="notice-info-area">
-        <div class="notice-info_title-wrap">
-          <h2 class="notice-info_title">공지사항</h2>
-          <a href="#" class="notice-info_btn"></a>
-        </div>
-        <ul class="notice-info-list">
-          <li class="notice-info-list_el"><span class="notice-info-list_icon">공지</span><a href="#">시스템 장애 _ 모바일어플(안드로이드)
-              국민내일배움카드 발급 장애</a></li>
-          <li class="notice-info-list_el"><span class="notice-info-list_icon">공지</span><a href="#">직업훈련 시스템 작업 안내
-              2022.01.15.(토) 09:00 ~ 18:00</a>
+      <div class="course-info-title-area margin-0-auto">
+        <h2 class="course-info-title">우수훈련과정</h2>
+        <button class="course-more-btn">기준알아보기</button>
+        <ul class="course-info-button-list">
+          <li class="course-info-button-el">
+            <button class="course-info-button active-course-button">
+              서울<span class="course-count">(143)</span>
+            </button>
           </li>
-          <li class="notice-info-list_el"><span class="notice-info-list_icon">알림</span><a href="#">직업훈련기관 방역패스 집행정지 관련
-              방역수칙 안내</a></li>
-          <li class="notice-info-list_el"><span class="notice-info-list_icon">알림</span><a href="#">코로나 학번 대상 훈련비 지원 확대
-              관련 업무지침 안내</a></li>
-          <li class="notice-info-list_el"><span class="notice-info-list_icon">공지</span><a href="#">21년도 HRD-Net 주요개편 내용
-              안내</a></li>
+          <li class="course-info-button-el">
+            <button class="course-info-button">
+              경기<span class="course-count">(149)</span>
+            </button>
+          </li>
+          <li class="course-info-button-el">
+            <button class="course-info-button">
+              인천<span class="course-count">(58)</span>
+            </button>
+          </li>
+          <li class="course-info-button-el">
+            <button class="course-info-button">
+              충청<span class="course-count">(71)</span>
+            </button>
+          </li>
+          <li class="course-info-button-el">
+            <button class="course-info-button">
+              경상<span class="course-count">(135)</span>
+            </button>
+          </li>
+          <li class="course-info-button-el">
+            <button class="course-info-button">
+              전라<span class="course-count">(70)</span>
+            </button>
+          </li>
+          <li class="course-info-button-el">
+            <button class="course-info-button">
+              강원/제주<span class="course-count">(8)</span>
+            </button>
+          </li>
+        </ul>
+        <div class="course-info-content-wrap">
+          <div class="course-info-vertical-menu">
+            <ul class="course-training-btn-list">
+              <li class="course-training-btn-el">
+                <button class="course-training-button">구직자 훈련</button>
+              </li>
+              <li class="course-training-btn-el">
+                <button class="course-training-button">재직자 훈련</button>
+              </li>
+            </ul>
+            <ul class="training-course-category">
+              <li class="training-course-category-el">
+                <a href="#"
+                  >전체<span class="training-course-el-count">(43)</span></a
+                >
+              </li>
+              <li class="training-course-category-el">
+                <a href="#"
+                  >음식조리<span class="training-course-el-count">(2)</span></a
+                >
+              </li>
+              <li class="training-course-category-el">
+                <a href="#"
+                  >생산관리<span class="training-course-el-count">(1)</span></a
+                >
+              </li>
+              <li class="training-course-category-el">
+                <a href="#"
+                  >e-비즈니스<span class="training-course-el-count"
+                    >(1)</span
+                  ></a
+                >
+              </li>
+              <li class="training-course-category-el">
+                <a href="#"
+                  >건축설계 · 감리<span class="training-course-el-count"
+                    >(5)</span
+                  ></a
+                >
+              </li>
+              <li class="training-course-category-el">
+                <a href="#"
+                  >문화콘텐츠제작<span class="training-course-el-count"
+                    >(4)</span
+                  ></a
+                >
+              </li>
+              <li class="training-course-category-el">
+                <a href="#"
+                  >디자인<span class="training-course-el-count">(5)</span></a
+                >
+              </li>
+              <li class="training-course-category-el">
+                <a href="#"
+                  >법무<span class="training-course-el-count">(5)</span></a
+                >
+              </li>
+              <li class="training-course-category-el">
+                <a href="#"
+                  >기계설계<span class="training-course-el-count">(5)</span></a
+                >
+              </li>
+              <li class="training-course-category-el">
+                <a href="#"
+                  >출판<span class="training-course-el-count">(5)</span></a
+                >
+              </li>
+              <li class="training-course-category-el">
+                <a href="#"
+                  >정보기술개발<span class="training-course-el-count"
+                    >(5)</span
+                  ></a
+                >
+              </li>
+              <li class="training-course-category-el">
+                <a href="#"
+                  >회계<span class="training-course-el-count">(4)</span></a
+                >
+              </li>
+              <li class="training-course-category-el">
+                <a href="#"
+                  >귀금속 · 보석<span class="training-course-el-count"
+                    >(1)</span
+                  ></a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="course-info-vertical-content">
+            <ul class="course-info-contents-list">
+              <li class="course-info-contents-el">
+                <a href="#"
+                  ><img
+                    class="course-info-contents-main"
+                    src="./img/www_hrd_go_kr/3 (4).jpg"
+                    alt=""
+                    class="course-info-image"
+                /></a>
+                <a href="#">
+                  <p class="course-info-exp">
+                    한식+양식조리기능사 취득(이론 + 실기)<img
+                      src="./img/www_hrd_go_kr/ico_system2_2.gif"
+                      alt=""
+                      class="course-info-small-icon"
+                    />
+                  </p>
+                </a>
+                <div class="course-info-under">
+                  <div class="under-content-left-box">
+                    <p class="under-content-left-exp">서울 금천구</p>
+                    <p class="under-content-left-exp">만족도</p>
+                    <span class="star-evaluate"></span>
+                  </div>
+                  <div class="under-content-right-box">
+                    <div class="graphArea">
+                      <div class="graph">
+                        <div class="svg-item">
+                          <svg
+                            width="100%"
+                            height="100%"
+                            viewBox="0 0 40 40"
+                            class="donut"
+                          >
+                            <circle
+                              class="donut-hole"
+                              cx="20"
+                              cy="20"
+                              r="15.91549430918954"
+                              fill="#fff"
+                            ></circle>
+                            <circle
+                              class="donut-ring"
+                              cx="20"
+                              cy="20"
+                              r="15.91549430918954"
+                              fill="transparent"
+                              stroke-width="6"
+                            ></circle>
+                            <circle
+                              class="donut-segment donut-segment-2"
+                              cx="20"
+                              cy="20"
+                              r="15.91549430918954"
+                              fill="transparent"
+                              stroke-width="6"
+                              stroke-dasharray="78 22"
+                              stroke-dashoffset="25"
+                            ></circle>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="percentage-exp">취업률<br />78%</p>
+                  </div>
+                </div>
+              </li>
+              <li class="course-info-contents-el">
+                <a href="#"
+                  ><img
+                    class="course-info-contents-main"
+                    src="./img/www_hrd_go_kr/2 (8).jpg"
+                    alt=""
+                    class="course-info-image"
+                /></a>
+                <a href="#">
+                  <p class="course-info-exp">
+                    전산세무회계(전산회계1급, 전산세무2급)
+                    &ERP정보관리사(회계2급, 인사2급)<img
+                      src="./img/www_hrd_go_kr/ico_system2_2.gif"
+                      alt=""
+                      class="course-info-small-icon"
+                    />
+                  </p>
+                </a>
+                <div class="course-info-under">
+                  <div class="under-content-left-box">
+                    <p class="under-content-left-exp">서울 서초구</p>
+                    <p class="under-content-left-exp">만족도</p>
+                    <span class="star-evaluate star-5"></span>
+                  </div>
+                  <div class="under-content-right-box">
+                    <div class="graphArea">
+                      <div class="graph">
+                        <div class="svg-item">
+                          <svg
+                            width="100%"
+                            height="100%"
+                            viewBox="0 0 40 40"
+                            class="donut"
+                          >
+                            <circle
+                              class="donut-hole"
+                              cx="20"
+                              cy="20"
+                              r="15.91549430918954"
+                              fill="#fff"
+                            ></circle>
+                            <circle
+                              class="donut-ring"
+                              cx="20"
+                              cy="20"
+                              r="15.91549430918954"
+                              fill="transparent"
+                              stroke-width="6"
+                            ></circle>
+                            <circle
+                              class="donut-segment donut-segment-2"
+                              cx="20"
+                              cy="20"
+                              r="15.91549430918954"
+                              fill="transparent"
+                              stroke-width="6"
+                              stroke-dasharray="78 22"
+                              stroke-dashoffset="25"
+                            ></circle>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="percentage-exp">취업률<br />75.5%</p>
+                  </div>
+                </div>
+              </li>
+              <li class="course-info-contents-el">
+                <a href="#"
+                  ><img
+                    class="course-info-contents-main"
+                    src="./img/www_hrd_go_kr/1 (10).jpg"
+                    alt=""
+                    class="course-info-image"
+                /></a>
+                <a href="#">
+                  <p class="course-info-exp">
+                    전자소송 및 회생파산 법률취업교육과정<img
+                      src="./img/www_hrd_go_kr/ico_system2_2.gif"
+                      alt=""
+                      class="course-info-small-icon"
+                    />
+                  </p>
+                </a>
+                <div class="course-info-under">
+                  <div class="under-content-left-box">
+                    <p class="under-content-left-exp">서울 서초구</p>
+                    <p class="under-content-left-exp">만족도</p>
+                    <span class="star-evaluate"></span>
+                  </div>
+                  <div class="under-content-right-box">
+                    <div class="graphArea">
+                      <div class="graph">
+                        <div class="svg-item">
+                          <svg
+                            width="100%"
+                            height="100%"
+                            viewBox="0 0 40 40"
+                            class="donut"
+                          >
+                            <circle
+                              class="donut-hole"
+                              cx="20"
+                              cy="20"
+                              r="15.91549430918954"
+                              fill="#fff"
+                            ></circle>
+                            <circle
+                              class="donut-ring"
+                              cx="20"
+                              cy="20"
+                              r="15.91549430918954"
+                              fill="transparent"
+                              stroke-width="6"
+                            ></circle>
+                            <circle
+                              class="donut-segment donut-segment-2"
+                              cx="20"
+                              cy="20"
+                              r="15.91549430918954"
+                              fill="transparent"
+                              stroke-width="6"
+                              stroke-dasharray="78 22"
+                              stroke-dashoffset="25"
+                            ></circle>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="percentage-exp">취업률<br />74.8%</p>
+                  </div>
+                </div>
+              </li>
+              <li class="course-info-contents-el">
+                <a href="#"
+                  ><img
+                    class="course-info-contents-main"
+                    src="./img/www_hrd_go_kr/1 (11).jpg"
+                    alt=""
+                    class="course-info-image"
+                /></a>
+                <a href="#">
+                  <p class="course-info-exp">
+                    전자상거래 디지털마케팅 및 광고 실무자 양성과정
+                    <img
+                      src="./img/www_hrd_go_kr/ico_system2_2.gif"
+                      alt=""
+                      class="course-info-small-icon"
+                    />
+                  </p>
+                </a>
+                <div class="course-info-under">
+                  <div class="under-content-left-box">
+                    <p class="under-content-left-exp">서울 중구</p>
+                    <p class="under-content-left-exp">만족도</p>
+                    <span class="star-evaluate star-5"></span>
+                  </div>
+                  <div class="under-content-right-box">
+                    <div class="graphArea">
+                      <div class="graph">
+                        <div class="svg-item">
+                          <svg
+                            width="100%"
+                            height="100%"
+                            viewBox="0 0 40 40"
+                            class="donut"
+                          >
+                            <circle
+                              class="donut-hole"
+                              cx="20"
+                              cy="20"
+                              r="15.91549430918954"
+                              fill="#fff"
+                            ></circle>
+                            <circle
+                              class="donut-ring"
+                              cx="20"
+                              cy="20"
+                              r="15.91549430918954"
+                              fill="transparent"
+                              stroke-width="6"
+                            ></circle>
+                            <circle
+                              class="donut-segment donut-segment-2"
+                              cx="20"
+                              cy="20"
+                              r="15.91549430918954"
+                              fill="transparent"
+                              stroke-width="6"
+                              stroke-dasharray="78 22"
+                              stroke-dashoffset="25"
+                            ></circle>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="percentage-exp">취업률<br />77.2%</p>
+                  </div>
+                </div>
+              </li>
+              <li class="course-info-contents-el">
+                <a href="#"
+                  ><img
+                    class="course-info-contents-main"
+                    src="./img/www_hrd_go_kr/1 (5).jpg"
+                    alt=""
+                    class="course-info-image"
+                /></a>
+                <a href="#">
+                  <p class="course-info-exp">
+                    [멀티미디어콘텐츠제작]광고영상콘텐츠(프리미어,에펙,영상편집)<img
+                      src="./img/www_hrd_go_kr/ico_system2_2.gif"
+                      alt=""
+                      class="course-info-small-icon"
+                    />
+                  </p>
+                </a>
+                <div class="course-info-under">
+                  <div class="under-content-left-box">
+                    <p class="under-content-left-exp">서울 종로구</p>
+                    <p class="under-content-left-exp">만족도</p>
+                    <span class="star-evaluate"></span>
+                  </div>
+                  <div class="under-content-right-box">
+                    <div class="graphArea">
+                      <div class="graph">
+                        <div class="svg-item">
+                          <svg
+                            width="100%"
+                            height="100%"
+                            viewBox="0 0 40 40"
+                            class="donut"
+                          >
+                            <circle
+                              class="donut-hole"
+                              cx="20"
+                              cy="20"
+                              r="15.91549430918954"
+                              fill="#fff"
+                            ></circle>
+                            <circle
+                              class="donut-ring"
+                              cx="20"
+                              cy="20"
+                              r="15.91549430918954"
+                              fill="transparent"
+                              stroke-width="6"
+                            ></circle>
+                            <circle
+                              class="donut-segment donut-segment-2"
+                              cx="20"
+                              cy="20"
+                              r="15.91549430918954"
+                              fill="transparent"
+                              stroke-width="6"
+                              stroke-dasharray="78 22"
+                              stroke-dashoffset="25"
+                            ></circle>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="percentage-exp">취업률<br />75%</p>
+                  </div>
+                </div>
+              </li>
+              <li class="course-info-contents-el">
+                <a href="#"
+                  ><img
+                    class="course-info-contents-main"
+                    src="./img/www_hrd_go_kr/1 (7).jpg"
+                    alt=""
+                    class="course-info-image"
+                /></a>
+                <a href="#">
+                  <p class="course-info-exp">
+                    전산회계1급,전산세무2급,ERP정보관리사(인사2급,회계2급)
+                    자격증<img
+                      src="./img/www_hrd_go_kr/ico_system2_2.gif"
+                      alt=""
+                      class="course-info-small-icon"
+                    />
+                  </p>
+                </a>
+                <div class="course-info-under">
+                  <div class="under-content-left-box">
+                    <p class="under-content-left-exp">서울 종로구</p>
+                    <p class="under-content-left-exp">만족도</p>
+                    <span class="star-evaluate star-5"></span>
+                  </div>
+                  <div class="under-content-right-box">
+                    <div class="graphArea">
+                      <div class="graph">
+                        <div class="svg-item">
+                          <svg
+                            width="100%"
+                            height="100%"
+                            viewBox="0 0 40 40"
+                            class="donut"
+                          >
+                            <circle
+                              class="donut-hole"
+                              cx="20"
+                              cy="20"
+                              r="15.91549430918954"
+                              fill="#fff"
+                            ></circle>
+                            <circle
+                              class="donut-ring"
+                              cx="20"
+                              cy="20"
+                              r="15.91549430918954"
+                              fill="transparent"
+                              stroke-width="6"
+                            ></circle>
+                            <circle
+                              class="donut-segment donut-segment-2"
+                              cx="20"
+                              cy="20"
+                              r="15.91549430918954"
+                              fill="transparent"
+                              stroke-width="6"
+                              stroke-dasharray="78 22"
+                              stroke-dashoffset="25"
+                            ></circle>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="percentage-exp">취업률<br />75%</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="course-info-contents-buttons">
+              <div class="k-digital-button-area-inner">
+                <ul class="k-digital-button-area-list">
+                  <li class="k-digital-button active-button"></li>
+                  <li class="k-digital-button"></li>
+                  <li class="k-digital-button"></li>
+                  <li class="k-digital-button"></li>
+                  <li class="k-digital-button"></li>
+                  <li class="k-digital-button"></li>
+                  <li class="k-digital-button"></li>
+                  <li class="k-digital-button"></li>
+                  <li class="k-digital-button"></li>
+                  <li class="k-digital-button"></li>
+                  <li class="k-digital-button"></li>
+                  <li class="k-digital-button"></li>
+                  <li class="k-digital-button"></li>
+                  <li class="k-digital-button"></li>
+                  <li class="k-digital-button"></li>
+                  <li class="k-digital-button"></li>
+                  <li class="k-digital-button"></li>
+                  <li class="k-digital-button"></li>
+                  <li class="k-digital-button"></li>
+                  <li class="k-digital-button"></li>
+                  <li class="k-digital-button"></li>
+                  <li class="k-digital-button"></li>
+                  <li class="k-digital-button"></li>
+                  <div class="k-digital-button-icon-wrap">
+                    <button class="k-digital-stop"></button>
+                    <button class="k-digital-play"></button>
+                  </div>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- k-digital-view -->
+      <div class="digital-business-area margin-0-auto">
+        <h2 class="digital-business-title">범부처 디지털 훈련 사업 모아보기</h2>
+        <ul class="digital-business-card-list">
+          <li>
+            <a href="#">
+              <figure class="digital-business_el digital-ai"></figure>
+              <figcaption>AI · 빅데이터</figcaption>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <figure class="digital-business_el digital-manufacture"></figure>
+              <figcaption>스마트제조</figcaption>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <figure class="digital-business_el digital-hight-tech"></figure>
+              <figcaption>첨단소재</figcaption>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <figure class="digital-business_el digital-bio"></figure>
+              <figcaption>바이오</figcaption>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <figure class="digital-business_el digital-cloud"></figure>
+              <figcaption>클라우드</figcaption>
+            </a>
+          </li>
         </ul>
       </div>
-      <div class="institute-search-area"></div>
+      <div class="notice-info-search-wrap margin-0-auto">
+        <div class="notice-info-area">
+          <div class="notice-info_title-wrap">
+            <h2 class="notice-info_title notice-search-area-title">공지사항</h2>
+            <a href="#" class="notice-info_btn"></a>
+          </div>
+          <ul class="notice-info-list">
+            <li class="notice-info-list_el">
+              <span class="notice-info-list_icon">공지</span
+              ><a href="#"
+                >시스템 장애 _ 모바일어플(안드로이드) 국민내일배움카드 발급
+                장애</a
+              >
+            </li>
+            <li class="notice-info-list_el">
+              <span class="notice-info-list_icon">공지</span
+              ><a href="#"
+                >직업훈련 시스템 작업 안내 2022.01.15.(토) 09:00 ~ 18:00</a
+              >
+            </li>
+            <li class="notice-info-list_el">
+              <span class="notice-info-list_icon">알림</span
+              ><a href="#">직업훈련기관 방역패스 집행정지 관련 방역수칙 안내</a>
+            </li>
+            <li class="notice-info-list_el">
+              <span class="notice-info-list_icon">알림</span
+              ><a href="#"
+                >코로나 학번 대상 훈련비 지원 확대 관련 업무지침 안내</a
+              >
+            </li>
+            <li class="notice-info-list_el">
+              <span class="notice-info-list_icon">공지</span
+              ><a href="#">21년도 HRD-Net 주요개편 내용 안내</a>
+            </li>
+          </ul>
+          <div class="advertise-box">
+            <ul class="advertise-banner-list">
+              <li class="advertise-banner-list-el">
+                <a href="#"
+                  ><img src="./img/www_hrd_go_kr/banner001.png" alt=""
+                /></a>
+              </li>
+              <li class="advertise-banner-list-el">
+                <a href="#"
+                  ><img src="./img/www_hrd_go_kr/banner002.png" alt=""
+                /></a>
+              </li>
+            </ul>
+            <div class="k-digital-button-area padding-0">
+              <div class="k-digital-button-area-inner">
+                <ul class="k-digital-button-area-list">
+                  <li class="k-digital-button active-button"></li>
+                  <li class="k-digital-button"></li>
+                  <li class="k-digital-button"></li>
+                  <li class="k-digital-button"></li>
+                  <li class="k-digital-button"></li>
+                  <li class="k-digital-button"></li>
+                  <li class="k-digital-button"></li>
+                  <li class="k-digital-button"></li>
+                  <li class="k-digital-button"></li>
+                  <li class="k-digital-button"></li>
+                  <div class="k-digital-button-icon-wrap">
+                    <button class="k-digital-stop"></button>
+                    <button class="k-digital-play"></button>
+                  </div>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="institute-search-area">
+          <h2 class="institute-search_title notice-search-area-title">
+            기관검색
+          </h2>
+          <div class="institute-search-inner-wrap">
+            <form action="#" method="post" class="institute-search-data">
+              <fieldset>
+                <legend>고용센터 검색</legend>
+                <div class="search-inner-left">
+                  <div class="search-inner-left_top">
+                    <dl>
+                      <dt><label>고용센터 검색</label></dt>
+                      <dd>
+                        <select
+                          class="center-area-selec"
+                          name="center-area"
+                          id="center-area"
+                        >
+                          <option value="seoul">서울</option>
+                        </select>
+                        <button class="center-search-btn">지역검색</button>
+                      </dd>
+                    </dl>
+                  </div>
+                  <div class="search-inner-left_bottom">
+                    <ul class="search-inner-button-list">
+                      <li class="search-inner-button-el">
+                        <a href="#">한국산업인력공단</a>
+                      </li>
+                      <li class="search-inner-button-el border-bottom">
+                        <a href="#">훈련기관</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+            <div class="search_inner-right-bg"></div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</body>
-
+  </body>
 </html>
