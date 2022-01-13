@@ -26,10 +26,6 @@
 }
 
 /* Normalizing */
-* {
-  margin: 0;
-  padding: 0;
-}
 li {
   list-style: none;
 }
@@ -46,6 +42,7 @@ body {
   letter-spacing: -0.05em;
   color: var(--basic-font-color);
   height: 10000px;
+  line-height: 1.5;
 }
 button {
   border: none;
@@ -308,6 +305,8 @@ button.btn {
 .hashtag-item a {
   font-size: 14px;
   display: block;
+  height: 20px;
+  line-height: 20px;
 }
 .hashtag-item:last-child {
   color: #e16207;
@@ -777,4 +776,71 @@ button.btn {
 }
 .course-info-contents-buttons {
   padding-top: 20px;
+}
+
+.digital-business_el {
+  width: 216px;
+  height: 120px;
+}
+.digital-business_el.digital-ai {
+  background: url(../img/www_hrd_go_kr/BumDigitalImg01.jpg);
+}
+.digital-business_el.digital-manufacture {
+  background: url(../img/www_hrd_go_kr/BumDigitalImg02.jpg);
+}
+.digital-business_el.digital-hight-tech {
+  background: url(../img/www_hrd_go_kr/BumDigitalImg03.jpg);
+}
+.digital-business_el.digital-bio {
+  background: url(../img/www_hrd_go_kr/BumDigitalImg04.jpg);
+}
+.digital-business_el.digital-cloud {
+  background: url(../img/www_hrd_go_kr/BumDigitalImg05.jpg);
+}
+.digital-business-title {
+  font-size: 32px;
+  color: #4e4f51;
+  font-weight: 500;
+  text-align: center;
+  margin: 75px 0 40px;
+}
+.digital-business-card-list {
+  display: flex;
+  justify-content: space-between;
+}
+.digital-business_el + figcaption {
+  text-align: center;
+  font-size: 14px;
+  height: 40px;
+  line-height: 40px;
+  color: #4e4f51;
+}
+.notice-info-list_el {
+  margin-bottom: 10px;
+}
+.notice-info-list_icon {
+  padding: 1px 10px 2px;
+  margin: 0 20px 0 0;
+  color: #193294;
+  font-size: 11px;
+  border: 1px solid #eaeaea;
+}
+.notice-info_title {
+  font-size: 32px;
+  color: #4e4f51;
+  font-weight: 500;
+  text-align: center;
+  margin: 75px 0 40px;
+}
+.notice-info_btn {
+  background: url(../img/www_hrd_go_kr/btnMoreList.png);
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  right: 0;
+  top: 10px;
+  border: 1px solid #cdcdd1;
+}
+.notice-info_title-wrap {
+  position: relative;
 }
