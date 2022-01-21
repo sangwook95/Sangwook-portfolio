@@ -1,0 +1,156 @@
+@charset "UTF-8";
+/* 폰트 불러오기 */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Noto+Sans+KR&display=swap");
+@font-face {
+  font-family: "Montserrat";
+  src: url(../font/AnyConv.com__Montserrat-Bold.woff), url(../font/AnyConv.com__Montserrat-Medium.woff), url(../font/AnyConv.com__Montserrat-Regular.woff), url(../font/AnyConv.com__Montserrat-SemiBold.woff);
+  unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
+}
+
+/* 변수 */
+/* mixin */
+/* 함수 */
+/* 노말라이즈 */
+body {
+  font-family: "Montserrat", "Noto Sans KR", sans-serif;
+  font-weight: bold;
+  height: 3000px;
+}
+
+.list-on {
+  background: #000;
+  color: #fff;
+  padding: 0.75rem 0.875rem;
+  border-radius: 30px;
+}
+
+/* pc 화면  */
+.grid-container-1200 {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 62.5%;
+  position: relative;
+}
+
+.top-area {
+  width: 100%;
+  height: 37.5rem;
+  padding-top: 2.375rem;
+  position: relative;
+  z-index: 10;
+  background: #fff;
+}
+
+.grid-container-1200::before {
+  position: absolute;
+  left: 5%;
+  content: "";
+  display: block;
+  width: 90%;
+  height: 37.5rem;
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+}
+
+header {
+  width: 100%;
+}
+
+h1.main-logo {
+  text-indent: 101%;
+  overflow: hidden;
+  width: 76px;
+  height: 79px;
+  background: url(../img/main-page/main-logo.svg) no-repeat;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav {
+  width: 39.625rem;
+}
+
+nav .gnb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav .gnb li {
+  font-size: 1rem;
+}
+
+.title {
+  margin-top: 7.5rem;
+  text-align: center;
+}
+
+.title .my-name {
+  font-size: 3.75rem;
+}
+
+.title .exp {
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-top: 1.4375rem;
+}
+
+.show-btn {
+  width: 12.5rem;
+  height: 3.125rem;
+  border: 2px solid #000;
+  background: transparent;
+  text-align: center;
+  font-size: 2rem;
+  margin: 0 auto;
+  display: block;
+  margin-top: 4rem;
+  position: relative;
+}
+
+.show-btn .click {
+  font-size: 1.5rem;
+}
+
+.show-btn.resume-btn {
+  height: 6.25rem;
+}
+
+.about-me-area {
+  width: 100%;
+  position: relative;
+  height: 1000px;
+}
+
+.show-btn.about-me-btn {
+  position: relative;
+  position: absolute;
+  margin-top: unset;
+  top: 100px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+/* 테블릿 */
+/*# sourceMappingURL=index.css.map */

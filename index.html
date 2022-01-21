@@ -1,48 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/reset.css">
-    <style>
-        * {
-            list-style: none;
-            color: inherit;
-            text-decoration: none;
-        }
-
-        span,
-        a {
-            display: inline-block;
-            line-height: 1.5;
-        }
-
-        .container {
-            box-sizing: border-box;
-            height: 64px;
-        }
-
-        span {
-            width: 100px;
-            height: 24px;
-            background: red;
-        }
-
-        a {
-            width: 100px;
-            background: gray;
-        }
-    </style>
-</head>
-
-<body>
-    <div class="container">
-        <!-- <span></span> -->
-        <a href="#">안녕</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Han's Portfolio</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <div class="grid-container-1200">
+      <section class="top-area">
+        <header>
+          <h1 class="main-logo"><span>Han's Portfolio</span></h1>
+          <nav>
+            <ul class="gnb">
+              <li>About me</li>
+              <li>Skills</li>
+              <li>Portfolio</li>
+              <li class="list-on">CONTACT ME</li>
+            </ul>
+          </nav>
+        </header>
+        <div class="title">
+          <h2 class="my-name">Sangwook Han</h2>
+          <p class="exp">Web Publisher Portfolio</p>
+        </div>
+        <button class="show-btn resume-btn">
+          RESUME <br /><span class="click">Click Here !</span>
+        </button>
+      </section>
+      <div class="about-me-area">
+        <button class="show-btn about-me-btn">ABOUT ME</button>
+      </div>
     </div>
-</body>
-
+  </body>
 </html>

@@ -1,0 +1,145 @@
+/* 폰트 불러오기 */
+@font-face {
+  font-family: "Montserrat";
+  src: url(../font/AnyConv.com__Montserrat-Bold.woff),
+    url(../font/AnyConv.com__Montserrat-Medium.woff),
+    url(../font/AnyConv.com__Montserrat-Regular.woff),
+    url(../font/AnyConv.com__Montserrat-SemiBold.woff);
+  unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
+}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Noto+Sans+KR&display=swap");
+
+/* 변수 */
+$browser-rem-font-size: 16;
+$browser-em-font-size: 16;
+$container-width: 1200px;
+
+/* mixin */
+@mixin container-width {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 62.5%;
+}
+@mixin border-setting($b-px, $b-color) {
+  border: #{$b-px}px solid $b-color;
+}
+@mixin transition-50 {
+  transform: translate(-50%, -50%);
+}
+
+/* 함수 */
+@function rem($pixels, $context-rem: $browser-rem-font-size) {
+  @return #{$pixels/$context-rem}rem;
+}
+@function em($pixels, $context-em: $browser-em-font-size) {
+  @return #{$pixels/$context-em}em;
+}
+
+/* 노말라이즈 */
+body {
+  font-family: "Montserrat", "Noto Sans KR", sans-serif;
+  font-weight: bold;
+  height: 3000px;
+}
+
+.list-on {
+  background: #000;
+  color: #fff;
+  padding: rem(12) rem(14);
+  border-radius: 30px;
+}
+/* pc 화면  */
+.grid-container-1200 {
+  @include container-width;
+  position: relative;
+}
+.top-area {
+  width: 100%;
+  height: rem(600);
+  padding-top: rem(38);
+  position: relative;
+  z-index: 10;
+  background: #fff;
+}
+.grid-container-1200::before {
+  position: absolute;
+  left: 5%;
+  content: "";
+  display: block;
+  width: 90%;
+  height: rem(600);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+}
+header {
+  width: 100%;
+}
+h1.main-logo {
+  text-indent: 101%;
+  overflow: hidden;
+  width: 76px;
+  height: 79px;
+  background: url(../img/main-page/main-logo.svg) no-repeat;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav {
+  width: rem(634);
+  .gnb {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    li {
+      font-size: 1rem;
+    }
+  }
+}
+.title {
+  margin-top: 7.5rem;
+  text-align: center;
+  .my-name {
+    font-size: rem(60);
+  }
+  .exp {
+    font-weight: 500;
+    font-size: rem(24);
+    margin-top: rem(23);
+  }
+}
+.show-btn {
+  width: rem(200);
+  height: rem(50);
+  @include border-setting(2, #000);
+  background: transparent;
+  text-align: center;
+  font-size: rem(32);
+  margin: 0 auto;
+  display: block;
+  margin-top: 4rem;
+  position: relative;
+  .click {
+    font-size: rem(24);
+  }
+}
+.show-btn.resume-btn {
+  height: rem(100);
+}
+.about-me-area {
+  width: 100%;
+  position: relative;
+  height: 1000px;
+}
+.show-btn.about-me-btn {
+  position: relative;
+  position: absolute;
+  margin-top: unset;
+  top: 100px;
+  left: 50%;
+  @include transition-50();
+}
+/* 테블릿 */
+@media all and (max-width: 960px) {
+}
