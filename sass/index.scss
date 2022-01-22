@@ -13,6 +13,9 @@
 $browser-rem-font-size: 16;
 $browser-em-font-size: 16;
 $container-width: 1200px;
+$sm-size-font: 24px;
+$md-size-font: 32px;
+$lg-size-font: 60px;
 
 /* mixin */
 @mixin container-width {
@@ -25,6 +28,11 @@ $container-width: 1200px;
 }
 @mixin transition-50 {
   transform: translate(-50%, -50%);
+}
+@mixin h2-title {
+  text-align: center;
+  font-size: rem(32);
+  padding-top: rem(100);
 }
 
 /* 함수 */
@@ -60,6 +68,7 @@ body {
   position: relative;
   z-index: 10;
   background: #fff;
+  text-align: center;
 }
 .grid-container-1200::before {
   position: absolute;
@@ -78,7 +87,8 @@ h1.main-logo {
   overflow: hidden;
   width: 76px;
   height: 79px;
-  background: url(../img/main-page/main-logo.svg) no-repeat;
+  background: url(../img/main-page/main-logo.svg) no-repeat center;
+  background-size: 30px;
 }
 header {
   display: flex;
@@ -110,19 +120,11 @@ nav {
   }
 }
 .show-btn {
-  width: rem(200);
-  height: rem(50);
-  @include border-setting(2, #000);
-  background: transparent;
-  text-align: center;
-  font-size: rem(32);
-  margin: 0 auto;
-  display: block;
-  margin-top: 4rem;
-  position: relative;
-  .click {
-    font-size: rem(24);
-  }
+  background: #000;
+  color: #fff;
+  padding: rem(12) rem(14);
+  border-radius: 30px;
+  margin-top: rem(40);
 }
 .show-btn.resume-btn {
   height: rem(100);
@@ -132,13 +134,122 @@ nav {
   position: relative;
   height: 1000px;
 }
-.show-btn.about-me-btn {
-  position: relative;
-  position: absolute;
-  margin-top: unset;
-  top: 100px;
-  left: 50%;
-  @include transition-50();
+.about-me-title {
+  @include h2-title();
+}
+
+.skills-area-title {
+  @include h2-title();
+}
+.using-now-title {
+  font-size: $sm-size-font;
+  margin: rem(115) 0;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  .skill-el {
+    text-align: center;
+    figure {
+      width: rem(110);
+      height: auto;
+      padding-top: rem(80);
+      margin: 0 auto;
+      position: relative;
+    }
+  }
+}
+
+.skill-list2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: rem(30);
+  .skill-el2 {
+    text-align: center;
+    figure {
+      width: rem(130);
+      height: auto;
+      padding-top: rem(80);
+      margin: 0 auto;
+      position: relative;
+    }
+  }
+}
+
+@for $i from 1 to 5 {
+  .skill-el:nth-child(#{$i}) figure {
+    background: url(../img/main-page/skill-icon#{$i}.svg) no-repeat;
+    background-size: 100% 50px;
+  }
+}
+@for $i from 1 to 5 {
+  .skill-el2:nth-child(#{$i}) figure {
+    background: url(../img/main-page/skill-icon#{$i+4}.svg) no-repeat;
+    background-size: 100% 50px;
+  }
+}
+@for $i from 5 to 9 {
+  .skill-el:nth-child(#{$i}) {
+    margin-top: rem(30);
+  }
+}
+
+.learning {
+  font-size: $sm-size-font;
+  margin: rem(115) 0;
+}
+.learning-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  .learning-el {
+    text-align: center;
+    figure {
+      width: rem(130);
+      height: auto;
+      padding-top: rem(80);
+      margin: 0 auto;
+      position: relative;
+    }
+  }
+}
+
+@for $i from 1 to 5 {
+  .learning-el:nth-child(#{$i}) figure {
+    background: url(../img/main-page/learning-icon#{$i}.svg) no-repeat;
+    background-size: 100% 50px;
+  }
+}
+
+.other-skills {
+  font-size: $sm-size-font;
+  margin: rem(115) 0;
+}
+
+.other-skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  .other-skills-el {
+    text-align: center;
+    figure {
+      width: rem(130);
+      height: auto;
+      padding-top: rem(80);
+      margin: 0 auto;
+      position: relative;
+    }
+  }
+}
+
+@for $i from 1 to 3 {
+  .other-skills-el:nth-child(#{$i}) figure {
+    background: url(../img/main-page/other-#{$i}.svg) no-repeat;
+    background-size: 100% 50px;
+  }
 }
 /* 테블릿 */
 @media all and (max-width: 960px) {

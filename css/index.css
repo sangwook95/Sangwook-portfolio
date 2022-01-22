@@ -39,6 +39,7 @@ body {
   position: relative;
   z-index: 10;
   background: #fff;
+  text-align: center;
 }
 
 .grid-container-1200::before {
@@ -61,7 +62,8 @@ h1.main-logo {
   overflow: hidden;
   width: 76px;
   height: 79px;
-  background: url(../img/main-page/main-logo.svg) no-repeat;
+  background: url(../img/main-page/main-logo.svg) no-repeat center;
+  background-size: 30px;
 }
 
 header {
@@ -116,20 +118,11 @@ nav .gnb li {
 }
 
 .show-btn {
-  width: 12.5rem;
-  height: 3.125rem;
-  border: 2px solid #000;
-  background: transparent;
-  text-align: center;
-  font-size: 2rem;
-  margin: 0 auto;
-  display: block;
-  margin-top: 4rem;
-  position: relative;
-}
-
-.show-btn .click {
-  font-size: 1.5rem;
+  background: #000;
+  color: #fff;
+  padding: 0.75rem 0.875rem;
+  border-radius: 30px;
+  margin-top: 2.5rem;
 }
 
 .show-btn.resume-btn {
@@ -142,14 +135,206 @@ nav .gnb li {
   height: 1000px;
 }
 
-.show-btn.about-me-btn {
+.about-me-title {
+  text-align: center;
+  font-size: 2rem;
+  padding-top: 6.25rem;
+}
+
+.skills-area-title {
+  text-align: center;
+  font-size: 2rem;
+  padding-top: 6.25rem;
+}
+
+.using-now-title {
+  font-size: 24px;
+  margin: 7.1875rem 0;
+}
+
+.skill-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.skill-list .skill-el {
+  text-align: center;
+}
+
+.skill-list .skill-el figure {
+  width: 6.875rem;
+  height: auto;
+  padding-top: 5rem;
+  margin: 0 auto;
   position: relative;
-  position: absolute;
-  margin-top: unset;
-  top: 100px;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+}
+
+.skill-list2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 1.875rem;
+}
+
+.skill-list2 .skill-el2 {
+  text-align: center;
+}
+
+.skill-list2 .skill-el2 figure {
+  width: 8.125rem;
+  height: auto;
+  padding-top: 5rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+.skill-el:nth-child(1) figure {
+  background: url(../img/main-page/skill-icon1.svg) no-repeat;
+  background-size: 100% 50px;
+}
+
+.skill-el:nth-child(2) figure {
+  background: url(../img/main-page/skill-icon2.svg) no-repeat;
+  background-size: 100% 50px;
+}
+
+.skill-el:nth-child(3) figure {
+  background: url(../img/main-page/skill-icon3.svg) no-repeat;
+  background-size: 100% 50px;
+}
+
+.skill-el:nth-child(4) figure {
+  background: url(../img/main-page/skill-icon4.svg) no-repeat;
+  background-size: 100% 50px;
+}
+
+.skill-el2:nth-child(1) figure {
+  background: url(../img/main-page/skill-icon5.svg) no-repeat;
+  background-size: 100% 50px;
+}
+
+.skill-el2:nth-child(2) figure {
+  background: url(../img/main-page/skill-icon6.svg) no-repeat;
+  background-size: 100% 50px;
+}
+
+.skill-el2:nth-child(3) figure {
+  background: url(../img/main-page/skill-icon7.svg) no-repeat;
+  background-size: 100% 50px;
+}
+
+.skill-el2:nth-child(4) figure {
+  background: url(../img/main-page/skill-icon8.svg) no-repeat;
+  background-size: 100% 50px;
+}
+
+.skill-el:nth-child(5) {
+  margin-top: 1.875rem;
+}
+
+.skill-el:nth-child(6) {
+  margin-top: 1.875rem;
+}
+
+.skill-el:nth-child(7) {
+  margin-top: 1.875rem;
+}
+
+.skill-el:nth-child(8) {
+  margin-top: 1.875rem;
+}
+
+.learning {
+  font-size: 24px;
+  margin: 7.1875rem 0;
+}
+
+.learning-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.learning-list .learning-el {
+  text-align: center;
+}
+
+.learning-list .learning-el figure {
+  width: 8.125rem;
+  height: auto;
+  padding-top: 5rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+.learning-el:nth-child(1) figure {
+  background: url(../img/main-page/learning-icon1.svg) no-repeat;
+  background-size: 100% 50px;
+}
+
+.learning-el:nth-child(2) figure {
+  background: url(../img/main-page/learning-icon2.svg) no-repeat;
+  background-size: 100% 50px;
+}
+
+.learning-el:nth-child(3) figure {
+  background: url(../img/main-page/learning-icon3.svg) no-repeat;
+  background-size: 100% 50px;
+}
+
+.learning-el:nth-child(4) figure {
+  background: url(../img/main-page/learning-icon4.svg) no-repeat;
+  background-size: 100% 50px;
+}
+
+.other-skills {
+  font-size: 24px;
+  margin: 7.1875rem 0;
+}
+
+.other-skills-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.other-skills-list .other-skills-el {
+  text-align: center;
+}
+
+.other-skills-list .other-skills-el figure {
+  width: 8.125rem;
+  height: auto;
+  padding-top: 5rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+.other-skills-el:nth-child(1) figure {
+  background: url(../img/main-page/other-1.svg) no-repeat;
+  background-size: 100% 50px;
+}
+
+.other-skills-el:nth-child(2) figure {
+  background: url(../img/main-page/other-2.svg) no-repeat;
+  background-size: 100% 50px;
 }
 
 /* 테블릿 */
