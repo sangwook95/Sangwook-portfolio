@@ -1,0 +1,60 @@
+@import url(../css/reset.css);
+
+$browser-rem-font-size: 16;
+
+@function rem($pixels, $context-rem: $browser-rem-font-size) {
+  @return #{$pixels/$context-rem}rem;
+}
+
+.header {
+  width: 100%;
+  &__inner {
+    width: 100%;
+    height: rem(68);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & > .header__title {
+      overflow: hidden;
+      text-indent: 102%;
+      & > .band-logo {
+        background: url(../img/band_us/spr_intro.png) no-repeat 0 -98px;
+        width: 78px;
+        height: 29px;
+        margin-left: 17px;
+      }
+    }
+    & > .header__menu--right {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      position: absolute;
+      right: 30px;
+      .current-lang__ko {
+        &:before {
+          position: absolute;
+          top: 9px;
+          right: 0;
+          width: 0;
+          height: 0;
+          border-left: 3px solid transparent;
+          border-right: 3px solid transparent;
+          border-top: 3px solid #777;
+          content: "";
+        }
+      }
+      & > .link--sign-up,
+      .button--log-in {
+        margin-left: 27px;
+      }
+      & > .button--log-in {
+        height: 35px;
+        padding: 0 23px;
+        line-height: 35px;
+        border-radius: 2px;
+        background-color: #21c531;
+        color: #fafafa;
+      }
+    }
+  }
+}

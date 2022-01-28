@@ -1,0 +1,69 @@
+@import url(../css/reset.css);
+.header {
+  width: 100%;
+}
+
+.header__inner {
+  width: 100%;
+  height: 4.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__inner > .header__title {
+  overflow: hidden;
+  text-indent: 102%;
+}
+
+.header__inner > .header__title > .band-logo {
+  background: url(../img/band_us/spr_intro.png) no-repeat 0 -98px;
+  width: 78px;
+  height: 29px;
+  margin-left: 17px;
+}
+
+.header__inner > .header__menu--right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  position: absolute;
+  right: 30px;
+}
+
+.header__inner > .header__menu--right .current-lang__ko:before {
+  position: absolute;
+  top: 9px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-top: 3px solid #777;
+  content: "";
+}
+
+.header__inner > .header__menu--right > .link--sign-up,
+.header__inner > .header__menu--right .button--log-in {
+  margin-left: 27px;
+}
+
+.header__inner > .header__menu--right > .button--log-in {
+  height: 35px;
+  padding: 0 23px;
+  line-height: 35px;
+  border-radius: 2px;
+  background-color: #21c531;
+  color: #fafafa;
+}
+/*# sourceMappingURL=naverBand.css.map */

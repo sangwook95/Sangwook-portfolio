@@ -1,0 +1,341 @@
+@charset "UTF-8";
+/* 폰트 불러오기 */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Noto+Sans+KR&display=swap");
+@font-face {
+  font-family: "Montserrat";
+  src: url(../font/AnyConv.com__Montserrat-Bold.woff), url(../font/AnyConv.com__Montserrat-Medium.woff), url(../font/AnyConv.com__Montserrat-Regular.woff), url(../font/AnyConv.com__Montserrat-SemiBold.woff);
+  unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
+}
+
+/* 변수 */
+/* mixin */
+/* 함수 */
+/* 노말라이즈 */
+body {
+  font-family: "Montserrat", "Noto Sans KR", sans-serif;
+  font-weight: bold;
+  height: 3000px;
+}
+
+.list-on {
+  background: #000;
+  color: #fff;
+  padding: 0.75rem 0.875rem;
+  border-radius: 30px;
+}
+
+/* pc 화면  */
+.grid-container-1200 {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 62.5%;
+  position: relative;
+}
+
+.top-area {
+  width: 100%;
+  height: 37.5rem;
+  padding-top: 2.375rem;
+  position: relative;
+  z-index: 10;
+  background: #fff;
+  text-align: center;
+}
+
+.grid-container-1200::before {
+  position: absolute;
+  left: 5%;
+  content: "";
+  display: block;
+  width: 90%;
+  height: 37.5rem;
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+}
+
+header {
+  width: 100%;
+}
+
+h1.main-logo {
+  text-indent: 101%;
+  overflow: hidden;
+  width: 76px;
+  height: 79px;
+  background: url(../img/main-page/main-logo.svg) no-repeat center;
+  background-size: 30px;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav {
+  width: 39.625rem;
+}
+
+nav .gnb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav .gnb li {
+  font-size: 1rem;
+}
+
+.title {
+  margin-top: 7.5rem;
+  text-align: center;
+}
+
+.title .my-name {
+  font-size: 3.75rem;
+}
+
+.title .exp {
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-top: 1.4375rem;
+}
+
+.show-btn {
+  background: #000;
+  color: #fff;
+  padding: 0.75rem 0.875rem;
+  border-radius: 30px;
+  margin-top: 2.5rem;
+}
+
+.show-btn.resume-btn {
+  height: 6.25rem;
+}
+
+.about-me-area {
+  width: 100%;
+  position: relative;
+  height: 1000px;
+}
+
+.about-me-title {
+  text-align: center;
+  font-size: 2rem;
+  padding-top: 6.25rem;
+}
+
+.skills-area-title {
+  text-align: center;
+  font-size: 2rem;
+  padding-top: 6.25rem;
+}
+
+.using-now-title {
+  font-size: 24px;
+  margin: 7.1875rem 0;
+}
+
+.skill-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.skill-list .skill-el {
+  text-align: center;
+}
+
+.skill-list .skill-el figure {
+  width: 6.875rem;
+  height: auto;
+  padding-top: 5rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+.skill-list2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 1.875rem;
+}
+
+.skill-list2 .skill-el2 {
+  text-align: center;
+}
+
+.skill-list2 .skill-el2 figure {
+  width: 8.125rem;
+  height: auto;
+  padding-top: 5rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+.skill-el:nth-child(1) figure {
+  background: url(../img/main-page/skill-icon1.svg) no-repeat;
+  background-size: 100% 50px;
+}
+
+.skill-el:nth-child(2) figure {
+  background: url(../img/main-page/skill-icon2.svg) no-repeat;
+  background-size: 100% 50px;
+}
+
+.skill-el:nth-child(3) figure {
+  background: url(../img/main-page/skill-icon3.svg) no-repeat;
+  background-size: 100% 50px;
+}
+
+.skill-el:nth-child(4) figure {
+  background: url(../img/main-page/skill-icon4.svg) no-repeat;
+  background-size: 100% 50px;
+}
+
+.skill-el2:nth-child(1) figure {
+  background: url(../img/main-page/skill-icon5.svg) no-repeat;
+  background-size: 100% 50px;
+}
+
+.skill-el2:nth-child(2) figure {
+  background: url(../img/main-page/skill-icon6.svg) no-repeat;
+  background-size: 100% 50px;
+}
+
+.skill-el2:nth-child(3) figure {
+  background: url(../img/main-page/skill-icon7.svg) no-repeat;
+  background-size: 100% 50px;
+}
+
+.skill-el2:nth-child(4) figure {
+  background: url(../img/main-page/skill-icon8.svg) no-repeat;
+  background-size: 100% 50px;
+}
+
+.skill-el:nth-child(5) {
+  margin-top: 1.875rem;
+}
+
+.skill-el:nth-child(6) {
+  margin-top: 1.875rem;
+}
+
+.skill-el:nth-child(7) {
+  margin-top: 1.875rem;
+}
+
+.skill-el:nth-child(8) {
+  margin-top: 1.875rem;
+}
+
+.learning {
+  font-size: 24px;
+  margin: 7.1875rem 0;
+}
+
+.learning-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.learning-list .learning-el {
+  text-align: center;
+}
+
+.learning-list .learning-el figure {
+  width: 8.125rem;
+  height: auto;
+  padding-top: 5rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+.learning-el:nth-child(1) figure {
+  background: url(../img/main-page/learning-icon1.svg) no-repeat;
+  background-size: 100% 50px;
+}
+
+.learning-el:nth-child(2) figure {
+  background: url(../img/main-page/learning-icon2.svg) no-repeat;
+  background-size: 100% 50px;
+}
+
+.learning-el:nth-child(3) figure {
+  background: url(../img/main-page/learning-icon3.svg) no-repeat;
+  background-size: 100% 50px;
+}
+
+.learning-el:nth-child(4) figure {
+  background: url(../img/main-page/learning-icon4.svg) no-repeat;
+  background-size: 100% 50px;
+}
+
+.other-skills {
+  font-size: 24px;
+  margin: 7.1875rem 0;
+}
+
+.other-skills-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.other-skills-list .other-skills-el {
+  text-align: center;
+}
+
+.other-skills-list .other-skills-el figure {
+  width: 8.125rem;
+  height: auto;
+  padding-top: 5rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+.other-skills-el:nth-child(1) figure {
+  background: url(../img/main-page/other-1.svg) no-repeat;
+  background-size: 100% 50px;
+}
+
+.other-skills-el:nth-child(2) figure {
+  background: url(../img/main-page/other-2.svg) no-repeat;
+  background-size: 100% 50px;
+}
+
+/* 테블릿 */
+/*# sourceMappingURL=index.css.map */
