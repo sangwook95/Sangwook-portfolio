@@ -81,6 +81,10 @@ body {
   color: #fafafa;
 }
 
+main {
+  background-color: #f6f8fa;
+}
+
 .sign-up-section {
   width: 100%;
   background-color: #f6f8fa;
@@ -252,5 +256,74 @@ body {
   color: #2ecc71;
   text-decoration: underline;
   font-weight: 700;
+}
+
+.main-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: url(../img/band_us/bg_intro.jpg) no-repeat center/cover;
+  text-align: center;
+  width: 100%;
+  height: 33.75rem;
+}
+
+.main-img__title {
+  font-size: 2.625rem;
+  font-weight: 500;
+  text-shadow: 0 1px 1px black;
+  color: #fff;
+  letter-spacing: -1px;
+}
+
+.main-img__exp {
+  margin-top: 1.125rem;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1.63;
+  word-break: break-word;
+}
+
+.band-functions {
+  text-align: center;
+  width: 100%;
+  padding: 3.125rem 0;
+  background-color: #fff;
+}
+
+.band-functions__el--01, .band-functions__el--02, .band-functions__el--03 {
+  display: inline-block;
+  width: 18.75rem;
+}
+
+.band-functions__el--01 img, .band-functions__el--02 img, .band-functions__el--03 img {
+  width: 100%;
+}
+
+.band-functions__el--01 figcaption, .band-functions__el--02 figcaption, .band-functions__el--03 figcaption {
+  color: #444;
+  margin-top: 1rem;
+  font-size: 15px;
+  text-align: left;
+}
+
+.band-functions__el--01 figcaption strong, .band-functions__el--02 figcaption strong, .band-functions__el--03 figcaption strong {
+  display: inline-block;
+  color: #222;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 0.375rem;
+}
+
+.band-functions__el--02, .band-functions__el--03 {
+  margin-left: 2.875rem;
 }
 /*# sourceMappingURL=naverBand.css.map */

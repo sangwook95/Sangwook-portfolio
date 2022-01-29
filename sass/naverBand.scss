@@ -71,6 +71,9 @@ body {
   }
 }
 
+main {
+  background-color: $main-background-color;
+}
 .sign-up-section {
   width: 100%;
   background-color: $main-background-color;
@@ -202,5 +205,63 @@ body {
       text-decoration: underline;
       font-weight: 700;
     }
+  }
+}
+
+.main-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: url(../img/band_us/bg_intro.jpg) no-repeat center / cover;
+  text-align: center;
+  width: 100%;
+  height: rem(540);
+  &__title {
+    font-size: rem(42);
+    font-weight: 500;
+    text-shadow: 0 1px 1px rgb(0, 0, 0 / 11%);
+    color: #fff;
+    letter-spacing: -1px;
+  }
+  &__exp {
+    margin-top: rem(18);
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    line-height: 1.63;
+    word-break: break-word;
+  }
+}
+
+.band-functions {
+  text-align: center;
+  width: 100%;
+  padding: rem(50) 0;
+  background-color: #fff;
+  &__el--01,
+  &__el--02,
+  &__el--03 {
+    display: inline-block;
+    width: rem(300);
+    & img {
+      width: 100%;
+    }
+    & figcaption {
+      color: #444;
+      margin-top: rem(16);
+      font-size: 15px;
+      text-align: left;
+      & strong {
+        display: inline-block;
+        color: #222;
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: rem(6);
+      }
+    }
+  }
+  &__el--02,
+  &__el--03 {
+    margin-left: rem(46);
   }
 }
