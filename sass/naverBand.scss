@@ -265,3 +265,206 @@ main {
     margin-left: rem(46);
   }
 }
+
+.content-find {
+  width: rem(1000);
+  color: #222;
+  margin: 0 auto;
+  &__title {
+    font-size: rem(24);
+    position: relative;
+    margin-top: rem(46);
+    & .content-find__plus-link {
+      font-size: rem(14);
+      position: absolute;
+      right: 0;
+      top: 0;
+      &::after {
+        width: 6px;
+        height: 10px;
+        overflow: hidden;
+        display: inline-block;
+        background-repeat: no-repeat;
+        content: "";
+        background-image: url(../img/band_us/spr_intro.png);
+        background-position: -116px -129px;
+        margin: 5px 0 0 4px;
+        vertical-align: top;
+      }
+    }
+  }
+  &__contents-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 25px 0 24px;
+    align-items: center;
+  }
+  &__content {
+    flex: 1 0 50%;
+    align-items: center;
+    box-sizing: border-box;
+    padding-right: rem(20);
+    margin-bottom: rem(30);
+    & > div {
+      display: block;
+      width: 100%;
+    }
+    & figure {
+      display: flex;
+      & figcaption {
+        font-size: rem(14);
+        width: 100%;
+        & .content-name {
+          width: rem(375.014);
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        & .content-exp {
+          width: rem(375.014);
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          margin-top: 5px;
+          font-size: 13px;
+          font-weight: 400;
+          color: #666;
+        }
+        & .content-member {
+          margin-top: 4px;
+          line-height: 1.5;
+          font-size: 12px;
+          font-weight: 400;
+          color: #999;
+          display: block;
+          overflow: hidden;
+          &__leader::before {
+            display: inline-block;
+            margin: 7px 6px 0 3px;
+            width: 2px;
+            height: 2px;
+            background-color: #b3b3b3;
+            border-radius: 50%;
+            vertical-align: top;
+            content: "";
+          }
+        }
+        & .more-band-link {
+          position: relative;
+          margin-top: 7px;
+          height: 26px;
+          padding: 0 10px 0 9px;
+          background: #fff;
+          border: 1px solid #e1e1e1;
+          border-radius: 100px;
+          line-height: 23px;
+          font-size: 12px;
+          font-weight: 400;
+          color: #777;
+        }
+      }
+    }
+    & img {
+      width: rem(93);
+      height: rem(93);
+      margin-right: rem(12);
+      padding-top: rem(3);
+    }
+  }
+}
+
+.app-download {
+  padding: rem(30) 0 rem(33);
+  width: 100%;
+  &__inner {
+    width: rem(1000);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__wrapper {
+    display: flex;
+    & .app-download__text {
+      padding-top: rem(9);
+      color: #666;
+      font-size: rem(14);
+      & .app-download__title {
+        font-weight: 500;
+        font-size: rem(23);
+        color: #222;
+      }
+    }
+  }
+  &__band-app {
+    background: url(../img/band_us/spr_intro.png) no-repeat -162px 0;
+    width: 70px;
+    height: 70px;
+    position: relative;
+    margin-right: rem(20);
+    & span {
+      position: absolute;
+      clip: rect(1px, 1px, 1px, 1px);
+    }
+  }
+  &__store {
+    display: flex;
+  }
+  &__google-play {
+    width: 160px;
+    height: 47px;
+    background: url(../img/band_us/spr_intro.png) no-repeat 0 0;
+    margin-top: rem(8);
+  }
+  &__app-store {
+    width: 160px;
+    height: 47px;
+    margin: rem(8) 0 0 rem(6);
+    background: url(../img/band_us/spr_intro.png) no-repeat 0 -49px;
+  }
+}
+.footer {
+  background-color: #2a3038;
+  width: 100%;
+  height: rem(120);
+  &__inner {
+    width: rem(1000);
+    margin: 0 auto;
+  }
+  &__menu {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: rem(23);
+    &--el {
+      font-size: 13px;
+      font-weight: 400;
+      color: #777;
+      margin-left: rem(5);
+      &:first-child,
+      &:nth-child(11) {
+        margin-left: initial;
+      }
+      & a {
+        white-space: nowrap;
+        & strong {
+          font-weight: bolder;
+          color: #b3b3b3;
+        }
+        &::after {
+          display: inline-block;
+          width: 2px;
+          height: 2px;
+          margin: 8px 5px 4px 10px;
+          border-radius: 50%;
+          background-color: #d8d8d8;
+          content: "";
+        }
+      }
+    }
+  }
+  &__exp {
+    font-size: 13px;
+    font-weight: 500;
+    color: #b3b3b3;
+    margin-top: 5px;
+  }
+}
