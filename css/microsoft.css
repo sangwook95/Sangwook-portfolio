@@ -1,0 +1,118 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "SegoeUI";
+  src: url(../font/ms-font/SegoeUI-Light.woff) format(‘woff’);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "SegoeUI";
+  src: url(../font/ms-font/SegoeUI.woff) format(‘woff’);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "SegoeUI";
+  src: url(../font/ms-font/SegoeUI-SemiBold.woff) format(‘woff’);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "SegoeUI";
+  src: url(../font/ms-font/SegoeUI-Bold.woff) format(‘woff’);
+  font-weight: 700;
+}
+
+body {
+  font-family: "SegoeUI", sans-serif;
+}
+
+.main-container {
+  max-width: calc(1600px + 10%);
+  padding: 0 5%;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.inner-container {
+  width: 100%;
+}
+
+.header {
+  font-size: 0.8125rem;
+  margin-bottom: 0.125rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__main-logo {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1rem 0.375rem 1rem 0.625rem;
+  position: relative;
+  width: 8.5625rem;
+  height: 3.375rem;
+}
+
+.header__main-logo--inner {
+  background: url(../img/www_microsoft_com/RE1Mu3b.png) no-repeat 0 0/100% auto;
+  display: block;
+  width: 6.75rem;
+  height: 100%;
+}
+
+.header__main-logo--hidden {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.header__gnb {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.header__gnb .header__gnb--inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__gnb .header__gnb--inner .header__gnb--el a {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1rem 0.5rem 0.625rem;
+  margin-top: 0.0625rem;
+  border: 1px solid transparent;
+  height: 3rem;
+  display: inline-block;
+  color: #262626;
+}
+
+.header__right-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__right-nav--el01 {
+  padding: 0 0.0625rem 0 0.125rem;
+  margin-right: 0.9375rem;
+}
+
+.header__right-nav--el01 .header__right-nav--slide-down {
+  background: transparent;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid transparent;
+  padding: 1rem 1.25rem 1rem 0.9375rem;
+  margin: 0.0625rem 0.3125rem 0.0625rem 0;
+}
+
+.header__right-nav--el02 .search-bar {
+  display: none;
+}
+/*# sourceMappingURL=microsoft.css.map */
