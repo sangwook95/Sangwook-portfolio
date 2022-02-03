@@ -1,0 +1,99 @@
+@font-face {
+  font-family: "SegoeUI";
+  src: url(../font/ms-font/SegoeUI-Light.woff) format(‘woff’);
+  font-weight: 300;
+}
+@font-face {
+  font-family: "SegoeUI";
+  src: url(../font/ms-font/SegoeUI.woff) format(‘woff’);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "SegoeUI";
+  src: url(../font/ms-font/SegoeUI-SemiBold.woff) format(‘woff’);
+  font-weight: 600;
+}
+@font-face {
+  font-family: "SegoeUI";
+  src: url(../font/ms-font/SegoeUI-Bold.woff) format(‘woff’);
+  font-weight: 700;
+}
+
+$browser-rem-font-size: 16;
+
+@function rem($pixels, $context-rem: $browser-rem-font-size) {
+  @return #{$pixels/$context-rem}rem;
+}
+
+body {
+  font-family: "SegoeUI", sans-serif;
+}
+.main-container {
+  max-width: calc(1600px + 10%);
+  padding: 0 5%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.inner-container {
+  width: 100%;
+}
+.header {
+  font-size: rem(13);
+  margin-bottom: rem(2);
+  width: 100%;
+  display: flex;
+  &__main-logo {
+    box-sizing: border-box;
+    padding: rem(16) rem(6) rem(16) rem(10);
+    position: relative;
+    width: rem(137);
+    height: rem(54);
+    &--inner {
+      background: url(../img/www_microsoft_com/RE1Mu3b.png) no-repeat 0 0 / 100%
+        auto;
+      display: block;
+      width: rem(108);
+      height: 100%;
+    }
+    &--hidden {
+      position: absolute;
+      clip: rect(1px, 1px, 1px, 1px);
+    }
+  }
+  &__gnb {
+    flex: 1 1 auto;
+    .header__gnb--inner {
+      display: flex;
+      .header__gnb--el {
+        & a {
+          box-sizing: border-box;
+          padding: rem(16) rem(8) rem(10);
+          margin-top: rem(1);
+          border: 1px solid transparent;
+          height: rem(48);
+          display: inline-block;
+          color: #262626;
+        }
+      }
+    }
+  }
+  &__right-nav {
+    display: flex;
+    &--el01 {
+      padding: 0 rem(1) 0 rem(2);
+      margin-right: rem(15);
+      & .header__right-nav--slide-down {
+        background: transparent;
+        box-sizing: border-box;
+        border: 1px solid transparent;
+        padding: rem(16) rem(20) rem(16) rem(15);
+        margin: rem(1) rem(5) rem(1) 0;
+      }
+    }
+    &--el02 {
+      & .search-bar {
+        display: none;
+      }
+    }
+  }
+}
