@@ -96,11 +96,13 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: auto;
 }
 
 .header__right-nav--el01 {
   padding: 0 0.0625rem 0 0.125rem;
   margin-right: 0.9375rem;
+  position: relative;
 }
 
 .header__right-nav--el01 .header__right-nav--slide-down {
@@ -112,7 +114,141 @@ body {
   margin: 0.0625rem 0.3125rem 0.0625rem 0;
 }
 
+.header__right-nav--el01 .header__right-nav--slide-down::after {
+  content: "";
+  display: inline-block;
+  background: url(../img/www_microsoft_com/img_slide_down_icon.png) no-repeat 0 0/100% auto;
+  width: 0.8125rem;
+  margin-top: 0.25rem;
+  margin-left: 0.125rem;
+  height: 1.3125rem;
+  position: absolute;
+}
+
+.header__right-nav--el02 {
+  background: url(../img/www_microsoft_com/img_search_icon.png) no-repeat center/1.25rem auto;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 2.24812rem;
+}
+
 .header__right-nav--el02 .search-bar {
   display: none;
+}
+
+.header__right-nav--el03 a {
+  display: block;
+  background: url(../img/www_microsoft_com/img_shopping_cart.png) no-repeat center/1.75rem auto;
+  width: 2.0625rem;
+  height: 100%;
+}
+
+.header__right-nav--el04 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__right-nav--el04 a {
+  display: block;
+  background: url(../img/www_microsoft_com/img_plus_user_icon.svg) no-repeat center/2rem auto;
+  width: 2rem;
+  height: 2rem;
+  margin: 0.5rem;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+}
+
+.slider__el {
+  width: 100%;
+  position: relative;
+}
+
+.slider__el--inner {
+  position: absolute;
+  top: 1.5rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin: 0 auto;
+  width: 88%;
+}
+
+.slider__el--data {
+  display: inline-block;
+  width: 27.5rem;
+}
+
+.slider__el--data .yellow-box {
+  display: inline-block;
+  background: #ffb900;
+  color: #000000;
+  font-size: 0.9375rem;
+  padding: 0.1875rem 0.875rem 0.3125rem;
+  margin: 0.25rem 0;
+  font-weight: 600;
+}
+
+.slider__el--data .surface-pro-8 {
+  margin-top: 0.25rem;
+  font-size: 24px;
+  line-height: 28px;
+  padding-bottom: 0.25rem;
+  font-weight: 600;
+  letter-spacing: -0.24px;
+}
+
+.slider__el--data .surface-pro-8__exp {
+  font-size: 0.9375rem;
+  margin-top: 0.75rem;
+  line-height: 1.25rem;
+}
+
+.slider__el--data .shopping-now-btn {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  background-color: black;
+  color: #fff;
+  margin-top: 1.5rem;
+  padding: 0.5rem 1.25rem;
+  border: 2px solid transparent;
+}
+
+.slider__el img {
+  width: 100%;
+  height: auto;
+}
+
+.slider__btn {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid #dbdbdb;
+  width: 2.75rem;
+  height: 2.75rem;
+  background: #fafafa url(../img/www_microsoft_com/slide_btn_right.png) no-repeat 55% center;
+}
+
+.slider .btn--left {
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.slider .btn--right {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  background-position: 45% 55%;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 /*# sourceMappingURL=microsoft.css.map */

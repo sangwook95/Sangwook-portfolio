@@ -1,3 +1,4 @@
+$browser-rem-font-size: 16;
 @font-face {
   font-family: "SegoeUI";
   src: url(../font/ms-font/SegoeUI-Light.woff) format(‘woff’);
@@ -18,8 +19,6 @@
   src: url(../font/ms-font/SegoeUI-Bold.woff) format(‘woff’);
   font-weight: 700;
 }
-
-$browser-rem-font-size: 16;
 
 @function rem($pixels, $context-rem: $browser-rem-font-size) {
   @return #{$pixels/$context-rem}rem;
@@ -79,21 +78,137 @@ body {
   }
   &__right-nav {
     display: flex;
+    height: auto;
     &--el01 {
       padding: 0 rem(1) 0 rem(2);
       margin-right: rem(15);
+      position: relative;
       & .header__right-nav--slide-down {
         background: transparent;
         box-sizing: border-box;
         border: 1px solid transparent;
         padding: rem(16) rem(20) rem(16) rem(15);
         margin: rem(1) rem(5) rem(1) 0;
+        &::after {
+          content: "";
+          display: inline-block;
+          background: url(../img/www_microsoft_com/img_slide_down_icon.png)
+            no-repeat 0 0 / 100% auto;
+          width: rem(13);
+          margin-top: rem(4);
+          margin-left: rem(2);
+          height: rem(21);
+          position: absolute;
+        }
       }
     }
     &--el02 {
+      background: url(../img/www_microsoft_com/img_search_icon.png) no-repeat
+        center / rem(20) auto;
+      height: 100%;
+      box-sizing: border-box;
+      width: rem(35.97);
       & .search-bar {
         display: none;
       }
     }
+    &--el03 {
+      & a {
+        display: block;
+        background: url(../img/www_microsoft_com/img_shopping_cart.png)
+          no-repeat center / rem(28) auto;
+        width: rem(33);
+        height: 100%;
+      }
+    }
+    &--el04 {
+      display: flex;
+      align-items: center;
+      & a {
+        display: block;
+        background: url(../img/www_microsoft_com/img_plus_user_icon.svg)
+          no-repeat center / rem(32) auto;
+        width: rem(32);
+        height: rem(32);
+        margin: rem(8);
+      }
+    }
+  }
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  &__el {
+    width: 100%;
+    position: relative;
+    &--inner {
+      position: absolute;
+      top: rem(24);
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 0 auto;
+      width: 88%;
+    }
+    &--data {
+      display: inline-block;
+      width: rem(440);
+      .yellow-box {
+        display: inline-block;
+        background: #ffb900;
+        color: #000000;
+        font-size: rem(15);
+        padding: rem(3) rem(14) rem(5);
+        margin: rem(4) 0;
+        font-weight: 600;
+      }
+      .surface-pro-8 {
+        margin-top: rem(4);
+        font-size: 24px;
+        line-height: 28px;
+        padding-bottom: rem(4);
+        font-weight: 600;
+        letter-spacing: -0.24px;
+        &__exp {
+          font-size: rem(15);
+          margin-top: rem(12);
+          line-height: rem(20);
+        }
+      }
+      .shopping-now-btn {
+        font-size: rem(15);
+        font-weight: 600;
+        background-color: black;
+        color: #fff;
+        margin-top: rem(24);
+        padding: rem(8) rem(20);
+        border: 2px solid transparent;
+      }
+    }
+    & img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__btn {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid #dbdbdb;
+    width: rem(44);
+    height: rem(44);
+    background: #fafafa url(../img/www_microsoft_com/slide_btn_right.png)
+      no-repeat 55% center;
+  }
+  .btn--left {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+  .btn--right {
+    transform: rotate(180deg);
+    background-position: 45% 55%;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
   }
 }
